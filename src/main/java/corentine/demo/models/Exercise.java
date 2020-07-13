@@ -40,7 +40,7 @@ public class Exercise {
 
     public Exercise() { }
 
-    public Exercise(String name, String imageUrl, String description, Item... items) {
+    public Exercise(String name, String imageUrl, String description, int timeInMinutes, int youngAge, int oldAge,  Item... items) {
         this.name = name;
         this.imageUrl = imageUrl;
         this.description = description;

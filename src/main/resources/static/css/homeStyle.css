@@ -189,3 +189,7 @@ footer{
 .btn:hover::after{
     right: 80%;
 }
+
+.btnHyperlink{
+    text-decoration: none;
+}

@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="../static/css/items.css">
+    <title>Items List</title>
 </head>
 <body>
+<img class="logo" src="../static/images/logo.transparent.gif">
+<nav>
+    <ul class="main_menu">
+        <li><a href="../static/home.html" class="cool-link">HOME</a></li>
+        <li><a href="../static/aboutUs.html" class="cool-link">OUR MISSION</a></li>
+        <li><a href="../static/contactUs.html" class="cool-link">CONTACT US</a></li>
+    </ul>
+</nav>
+<h3 class="listHeader">Checkmark all items that are in your home</h3>
+<div id="listContainer">
+<!--        <img class="itemImage" th:src="${item.imageUrl}">-->  <!--uncomment once built-->
+<!--            <h4 class="book-details__title" th:text="${item.name}">Refactoring</h4>--> <!--uncomment once built-->
 
+    <!--since this is many to many relationship see if lines 26 & 25 work-->
+<!--            <h4 class="itemName" th:each="item: ${item.name}">-->
+<!--                <h3 th:text="${item.name}"></h3></h4>-->
+    <label class="checkboxContainer">Chairs<input type="checkbox"><span class="checkmark"></span></label>
+
+</div>
+
+<footer>
+    &copy; Team Core-N-Tine 2020
+</footer>
 </body>
 </html>

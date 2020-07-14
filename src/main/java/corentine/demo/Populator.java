@@ -28,21 +28,21 @@ public class Populator implements CommandLineRunner {
         itemRepo.save(stairs);
         itemRepo.save(jugs);
 
-        Exercise tricepsChairDip = new Exercise("Triceps Chair Dip", "", "", chair);
-        Exercise chairPlank = new Exercise("Chair Plank", "", "", chair);
-        Exercise legLift = new Exercise("Leg Lift", "", "", chair);
-        Exercise quickFeet = new Exercise("Quick Feet", "", "", chair);
-        Exercise splitSquat = new Exercise("Split Squat", "", "", chair);
-        Exercise stepUp = new Exercise("Step Up", "", "", stairs);
-        Exercise tricepsStairDip = new Exercise("Triceps Stair Dip", "", "", stairs);
-        Exercise skaterSteps = new Exercise("Skater Steps", "", "", stairs);
-        Exercise mountainClimber = new Exercise("Mountain Climber", "", "", stairs);
-        Exercise doubleStepUp = new Exercise("Double Step Up", "", "", stairs);
-        Exercise bicepCurls = new Exercise("Bicep Curls", "", "", jugs);
-        Exercise gobletSquat = new Exercise("Goblet Squat", "", "", jugs);
-        Exercise farmersWalk = new Exercise("Farmers Walk", "", "", jugs);
-        Exercise bentOverRow = new Exercise("Bent Over Row", "", "", jugs);
-        Exercise jugClean = new Exercise("Jug Clean", "", "", jugs);
+        Exercise tricepsChairDip = new Exercise("Triceps Chair Dip", "", "", 5, 3, 80, chair);
+        Exercise chairPlank = new Exercise("Chair Plank", "", "", 2, 5, 80,  chair);
+        Exercise legLift = new Exercise("Leg Lift", "", "",5, 5, 70,  chair);
+        Exercise quickFeet = new Exercise("Quick Feet", "", "", 10, 10, 60,  chair);
+        Exercise splitSquat = new Exercise("Split Squat", "", "", 3, 12, 50,chair);
+        Exercise stepUp = new Exercise("Step Up", "", "", 30, 12, 50,stairs);
+        Exercise tricepsStairDip = new Exercise("Triceps Stair Dip", "", "", 15,12, 60, stairs);
+        Exercise skaterSteps = new Exercise("Skater Steps", "", "",10, 10, 60, stairs);
+        Exercise mountainClimber = new Exercise("Mountain Climber", "", "", 5, 12, 50,  stairs);
+        Exercise doubleStepUp = new Exercise("Double Step Up", "", "",10, 12, 50, stairs);
+        Exercise bicepCurls = new Exercise("Bicep Curls", "", "", 10,10, 65,  jugs);
+        Exercise gobletSquat = new Exercise("Goblet Squat", "", "", 10,10, 70,  jugs);
+        Exercise farmersWalk = new Exercise("Farmers Walk", "", "", 10, 10, 70, jugs);
+        Exercise bentOverRow = new Exercise("Bent Over Row", "", "",10, 10, 60, jugs);
+        Exercise jugClean = new Exercise("Jug Clean", "", "", 10, 10, 60, jugs);
 
         exerciseRepo.save(tricepsChairDip);
         exerciseRepo.save(chairPlank);

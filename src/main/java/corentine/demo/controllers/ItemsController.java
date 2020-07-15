@@ -18,10 +18,16 @@ public class ItemsController {
     private ItemRepository itemRepo;
 
     @RequestMapping("/home/items")
+    public String displayAllItems(Model model){
+        model.addAttribute("item", itemRepo.findAll());
+        return "items";
+    }
+
+    @RequestMapping("/home/item/{id}")
     public String displayItems(@PathVariable long id, Model model){
         Optional<Item> retrievedItem = itemRepo.findById(id);
         Item foundItem = retrievedItem.get();
         model.addAttribute("item", foundItem);
-        return "items";
+        return "itemsView";
     }
 }

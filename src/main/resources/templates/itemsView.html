@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="/css/itemsView.css">
+    <title>Items List</title>
+</head>
+
+<body>
+<img class="logo" src="/images/logo.transparent.gif">
+<nav>
+    <ul class="main_menu">
+        <li><a href="/home.html" class="cool-link">HOME</a></li>
+        <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
+        <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
+    </ul>
+</nav>
+<h3 class="listHeader">Checkmark all items that are in your home</h3>
+<div id="listContainer">
+<!--        <img class="itemImage" th:src="${item.imageUrl}">  uncomment once built-->
+
+    <h3 class="listOfItems" th:each="item:${items}"><a th:text="${item.name}"></a>
+    </h3>
+
+<!--    <h3 class="listOfItems" th:each="item:${items}"><a th:href="@{'/items/'+-->
+<!--                ${item.name}}" th:text="${item.name}">Item</a>-->
+<!--    </h3>-->
+
+    <label class="checkboxContainer">Chairs<input type="checkbox"><span class="checkmark"></span></label>
+</div>
+
+<footer>
+    &copy; Team Core-N-Tine 2020
+</footer>
+</body>
+</html>

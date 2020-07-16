@@ -25,12 +25,12 @@
     <h3 class="listOfItems" th:each="item:${items}"><a th:text="${item.name}"></a>
     </h3>
 
-<!--    <h3 class="listOfItems" th:each="item:${items}"><a th:href="@{'/items/'+-->
-<!--                ${item.name}}" th:text="${item.name}">Item</a>-->
-<!--    </h3>-->
-
     <label class="checkboxContainer">Chairs<input type="checkbox"><span class="checkmark"></span></label>
 </div>
+
+<a class="btnHyperlink" href="../exerciseView.html"> <!--button is there but will need to go inside the form-->
+    <button class="btn">SUBMIT</button>
+</a>
 
 <footer>
     &copy; Team Core-N-Tine 2020

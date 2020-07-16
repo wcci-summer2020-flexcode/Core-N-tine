@@ -15,6 +15,9 @@ public class Exercise {
     private String name;
     private String imageUrl;
     private String description;
+    private int timeInMinutes;
+    private int youngAge;
+    private int oldAge;
     @ManyToMany
     private Collection<Item> items;
 
@@ -34,6 +37,12 @@ public class Exercise {
         return description;
     }
 
+    public int getTimeInMinutes() { return timeInMinutes;}
+
+    public int getYoungAge() { return youngAge;}
+
+    public int getOldAge() { return oldAge;}
+
     public Collection<Item> getItems() {
         return items;
     }
@@ -44,6 +53,9 @@ public class Exercise {
         this.name = name;
         this.imageUrl = imageUrl;
         this.description = description;
+        this.timeInMinutes = timeInMinutes;
+        this.youngAge = youngAge;
+        this.oldAge = oldAge;
         this.items = new ArrayList<>(Arrays.asList(items));
     }
 

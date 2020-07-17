@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
+<script src="itemsView.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -20,17 +21,28 @@
 </nav>
 <h3 class="listHeader">Checkmark all items that are in your home</h3>
 <div id="listContainer">
-<!--        <img class="itemImage" th:src="${item.imageUrl}">  uncomment once built-->
-
-    <h3 class="listOfItems" th:each="item:${items}"><a th:text="${item.name}"></a>
+    <h3 class="listOfItems" th:each="item:${items}">
+        <label class="checkboxContainer">-<input id="checkBox" type="checkbox" onclick="showHide()"><span class="checkmark"></span></label>
+        <a th:text="${item.name}"></a>
+        <img class="itemImage" th:src="${item.imageUrl}">
     </h3>
-
-    <label class="checkboxContainer">Chairs<input type="checkbox"><span class="checkmark"></span></label>
 </div>
 
-<!--<a class="btnHyperlink" href="../exerciseView.html"> &lt;!&ndash;button is there but will need to go inside the form&ndash;&gt;-->
-<!--    <button class="btn">SUBMIT</button>-->
-<!--</a>-->
+<!--<div id="listContainer">-->
+<!--    <h3 class="itemChair">Chair</h3>-->
+<!--    <img src="images/tricepsChairDip.gif">-->
+<!--    <label class="checkboxContainer">-<input type="checkbox" onclick="showHide()"><span class="checkmark"></span></label>-->
+<!--</div>-->
+
+<div id="hiddenField" style="display:none">
+    <h3 class="exercise-details-title" th:each="exercise:${exercises}"><a th:text="${exercise.name}"></a>
+    <img class="exerciseImage" th:src="${exercise.imageUrl}">
+    </h3>
+</div>
+
+<a class="btnHyperlink" href="/exercises"> <!--button is there but will need to go inside the form-->
+    <button class="btn">SUBMIT</button>
+</a>
 
 <footer>
     &copy; Team Core-N-Tine 2020

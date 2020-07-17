@@ -20,9 +20,9 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Item chair = new Item("Chair");
-        Item stairs = new Item("Stairs");
-        Item jugs = new Item("Jugs");
+        Item chair = new Item("Chair", "/images/tricepsChairDip.gif");
+        Item stairs = new Item("Stairs","/images/tricepsChairDip.gif");
+        Item jugs = new Item("Jugs", "/images/tricepsChairDip.gif");
 
         itemRepo.save(chair);
         itemRepo.save(stairs);

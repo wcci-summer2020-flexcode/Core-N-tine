@@ -1,6 +1,7 @@
 package corentine.demo.controllers;
 
 import corentine.demo.models.Item;
+import corentine.demo.repository.ExerciseRepository;
 import corentine.demo.repository.ItemRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,8 @@ public class ItemController {
 
     @Resource
     private ItemRepository itemRepo;
+    @Resource
+    private ExerciseRepository exerciseRepo;
 
 //    @RequestMapping("/home/items")
 //    public String displayAllItems(Model model){
@@ -34,8 +37,19 @@ public class ItemController {
     @RequestMapping({"/items"})
     public String displayAllItems(Model model){
         model.addAttribute("items", itemRepo.findAll());
+        model.addAttribute("exercises", exerciseRepo.findAll());
         return "itemsView";
     }
+
+//    @RequestMapping({"/items"})
+//    public String displayAllItems(Model model, @PathVariable long id){
+//        model.addAttribute("items", itemRepo.findAll());
+//        model.addAttribute("exercises", exerciseRepo.findAll());
+//        Optional<Item> retrievedItem = itemRepo.findById(id);
+//        Item foundItem = retrievedItem.get();
+//        model.addAttribute("item", foundItem);
+//        return "itemsView";
+//    }
 
     @RequestMapping("/items/{id}")
     public String displaySingleItem(@PathVariable long id, Model model) {

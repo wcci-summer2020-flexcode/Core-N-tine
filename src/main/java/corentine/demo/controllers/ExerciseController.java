@@ -29,7 +29,7 @@ public class ExerciseController {
         Optional<Exercise> retrievedExercise = exerciseRepo.findById(id);
         Exercise foundExercise = retrievedExercise.get();
         model.addAttribute("exercise", foundExercise);
-        return "exercisesView";  //this single view
+        return "exerciseView";  //this single view
     }
 
 

@@ -14,6 +14,7 @@ public class Exercise {
     private Long id;
     private String name;
     private String imageUrl;
+    @Lob
     private String description;
     @ManyToMany
     private Collection<Item> items;

@@ -1,5 +1,6 @@
 package corentine.demo.controllers;
 
+import corentine.demo.models.Exercise;
 import corentine.demo.models.Item;
 import corentine.demo.repository.ExerciseRepository;
 import corentine.demo.repository.ItemRepository;
@@ -50,6 +51,18 @@ public class ItemController {
 //        model.addAttribute("item", foundItem);
 //        return "itemsView";
 //    }
+
+//
+//    @RequestMapping({"/items"})
+//    public String displayAllItems(@PathVariable long id, Model model) {
+//        Optional<Exercise> retrievedExercise = exerciseRepo.findById(id);
+//        Exercise foundExercise = retrievedExercise.get();
+//        model.addAttribute("exercise", foundExercise);
+//        model.addAttribute("items", itemRepo.findAll());
+//        model.addAttribute("exercises", exerciseRepo.findAll());
+//        return "itemsView";
+//    }
+
 
     @RequestMapping("/items/{id}")
     public String displaySingleItem(@PathVariable long id, Model model) {

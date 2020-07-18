@@ -25,6 +25,7 @@
         <label class="checkboxContainer">-<input id="checkBox" type="checkbox" onclick="showHide()"><span class="checkmark"></span></label>
         <a th:text="${item.name}"></a>
         <img class="itemImage" th:src="${item.imageUrl}">
+
     </h3>
 </div>
 
@@ -36,7 +37,7 @@
 
 <div id="hiddenField" style="display:none">
     <h3 class="exercise-details-title" th:each="exercise:${exercises}"><a th:text="${exercise.name}"></a>
-    <img class="exerciseImage" th:src="${exercise.imageUrl}">
+<!--    <img class="exerciseImage" th:src="${exercise.imageUrl}">-->
     </h3>
 </div>
 

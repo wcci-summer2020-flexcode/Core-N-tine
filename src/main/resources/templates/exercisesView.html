@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="/css/excerciseView.css">
+    <link rel="stylesheet" href="css/excercisesView.css">
     <title>Exercise Details</title>
 </head>
 
@@ -20,18 +20,21 @@
 </nav>
 <div id="listContainer">
     <section class="exercise-details">
-        <h2 class="exerciseHeader">See below exercise guide</h2>
-        <h3 class="exercise-details-title" th:each="exercise:${exercises}"><a th:text="${exercise.name}"></a></h3>
-        <img class="exerciseImage" th:each="exercise:${exercises}" th:src="${exercise.imageUrl}">
-<!--        <p class="exercise-details-description" th:each="exercise:${exercises}" th:text="${exercise.description}"></p>-->
+        <h2 class="exerciseHeader">See below exercise guide:</h2>
 
-<!--            <nav>-->
-<!--                <ul class="exercise-details-minANDage">-->
-<!--                    <li th:text="${exercise.timeInMinutes}">Minutes needed:</li>-->
-<!--                    <li th:text="${exercise.youngAge}">Young Age:</li>-->
-<!--                    <li th:text="${exercise.oldAge}">Old Age:</li>-->
-<!--                </ul>-->
-<!--            </nav>-->
+        <section class="exercise-details" th:each="exercise:${exercises}">
+            <h3 class="exercise-details-title" th:text="${exercise.name}"></h3>
+            <img class="exerciseImage" th:src="${exercise.imageUrl}">
+            <ul class="exercise-details-minANDage">
+                <h4>Minutes Needed:</h4>
+                <li th:text="${exercise.timeInMinutes}"></li>
+                <h4>Age from:</h4>
+                <li th:text="${exercise.youngAge}"></li>
+                <h4>Age to:</h4>
+                <li th:text="${exercise.oldAge}"></li>
+                <p class="exercise-details-description" th:text="${exercise.description}"></p>
+            </ul>
+        </section>
 
     </section>
 </div>

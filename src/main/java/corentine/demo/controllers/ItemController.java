@@ -1,6 +1,7 @@
 package corentine.demo.controllers;
 
 import corentine.demo.models.Item;
+import corentine.demo.repository.ExerciseRepository;
 import corentine.demo.repository.ItemRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,24 +17,17 @@ public class ItemController {
 
     @Resource
     private ItemRepository itemRepo;
-
-//    @RequestMapping("/home/items")
-//    public String displayAllItems(Model model){
-//        model.addAttribute("item", itemRepo.findAll());
-//        return "items";//can I change this to itemsView
-//    }
-//
-//    @RequestMapping("/home/item/{id}")  //should this be /home/items{id}
-//    public String displayItems(@PathVariable long id, Model model){
-//        Optional<Item> retrievedItem = itemRepo.findById(id);
-//        Item foundItem = retrievedItem.get();
-//        model.addAttribute("item", foundItem);
-//        return "itemsView"; //i think this needs to be itemView
-//    }
+    @Resource
+    private ExerciseRepository exerciseRepo;
 
     @RequestMapping({"/items"})
     public String displayAllItems(Model model){
         model.addAttribute("items", itemRepo.findAll());
+        model.addAttribute("exercises", exerciseRepo.findAll());
+        model.addAttribute("chair", itemRepo.findItemByName("Chair"));
+        model.addAttribute("stairs", itemRepo.findItemByName("Stairs"));
+        model.addAttribute("jugs", itemRepo.findItemByName("Jugs"));
+        model.addAttribute("room", itemRepo.findItemByName("Empty Room"));
         return "itemsView";
     }
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
+<script src="itemsView.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -18,19 +19,65 @@
         <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
     </ul>
 </nav>
-<h3 class="listHeader">Checkmark all items that are in your home</h3>
-<div id="listContainer">
-<!--        <img class="itemImage" th:src="${item.imageUrl}">  uncomment once built-->
 
-    <h3 class="listOfItems" th:each="item:${items}"><a th:text="${item.name}"></a>
-    </h3>
+<!--Items and checkboxes-->
 
-<!--    <h3 class="listOfItems" th:each="item:${items}"><a th:href="@{'/items/'+-->
-<!--                ${item.name}}" th:text="${item.name}">Item</a>-->
-<!--    </h3>-->
-
-    <label class="checkboxContainer">Chairs<input type="checkbox"><span class="checkmark"></span></label>
+<div id="listContainer0">
+    <h3 class="itemRoom">Empty Room</h3>
+    <img src="images/room.jpg">
+    <label class="checkboxContainer">-<input id="roomBox" type="checkbox" onclick="showRoom()"><span class="checkmark"></span></label>
 </div>
+
+<div id="listContainer">
+    <h3 class="itemChair">Chair</h3>
+    <img src="images/chair.jpg">
+    <label class="checkboxContainer">-<input id="chairBox" type="checkbox" onclick="showChair()"><span class="checkmark"></span></label>
+</div>
+
+<div id="listContainer2">
+    <h3 class="itemStairs">Stairs</h3>
+    <img src="images/stairs.jpg">
+    <label class="checkboxContainer">-<input id="stairsBox" type="checkbox" onclick="showStairs()"><span class="checkmark"></span></label>
+</div>
+
+<div id="listContainer3">
+    <h3 class="itemChair">Jugs</h3>
+    <img src="images/jug.jpg">
+    <label class="checkboxContainer">-<input id="jugsBox" type="checkbox" onclick="showJugs()"><span class="checkmark"></span></label>
+</div>
+
+<!--Hidden fields of exercises-->
+
+
+<div id="hiddenField0" style="display:none">
+    <h3 class="exercise-details-title" th:each="exercise:${room.exercises}"> <a th:text="${exercise.name}"></a>
+        <img th:src="${exercise.imageUrl}">
+    </h3>
+</div>
+
+<div id="hiddenField" style="display:none">
+    <h3 class="exercise-details-title" th:each="exercise:${chair.exercises}"> <a th:text="${exercise.name}"></a>
+        <img th:src="${exercise.imageUrl}">
+    </h3>
+</div>
+
+<div id="hiddenField2" style="display:none">
+    <h3 class="exercise-details-title" th:each="exercise:${stairs.exercises}"> <a th:text="${exercise.name}"></a>
+        <img th:src="${exercise.imageUrl}">
+    </h3>
+</div>
+
+<div id="hiddenField3" style="display:none">
+    <h3 class="exercise-details-title" th:each="exercise:${jugs.exercises}"> <a th:text="${exercise.name}"></a>
+        <img th:src="${exercise.imageUrl}">
+    </h3>
+</div>
+
+<!--BUTTON-->
+
+<!--<a class="btnHyperlink" href="/exercises"> &lt;!&ndash;button is there but will need to go inside the form&ndash;&gt;-->
+<!--    <button class="btn">SUBMIT</button>-->
+<!--</a>-->
 
 <footer>
     &copy; Team Core-N-Tine 2020

@@ -16,6 +16,7 @@ public class Item {
     @GeneratedValue
     private Long id;
     private String name;
+    private String imageUrl;
     @ManyToMany(mappedBy = "items")
     private Collection<Exercise> exercises;
 
@@ -27,14 +28,17 @@ public class Item {
         return name;
     }
 
+    public String getImageUrl() { return imageUrl; }
+
     public Collection<Exercise> getExercises() {
         return exercises;
     }
 
     public Item() { }
 
-    public Item(String name, Exercise... exercises) {
+    public Item(String name, String imageUrl, Exercise... exercises) {
         this.name = name;
+        this.imageUrl = imageUrl;
         this.exercises = new ArrayList<>(Arrays.asList(exercises));
     }
 

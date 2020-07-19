@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="/css/exercisesView.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
+    <title>All Exercises</title>
+</head>
+
+<body>
+<img class="logo" src="/images/logo.transparent.gif">
+<nav>
+    <ul class="main_menu">
+        <li><a href="/home.html" class="cool-link">HOME</a></li>
+        <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
+        <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
+    </ul>
+</nav>
+
+    <h2 class="exerciseHeader">Simply browse through all of the exercises to find your fit</h2>
+
+        <section class="exerciseDetails" th:each="exercise:${exercises}">
+            <h3 class="exerciseDetailsName" th:text="${exercise.name}"></h3>
+            <img class="exerciseImage" th:src="${exercise.imageUrl}">
+            <ul class="exercise-details-minANDage">
+                <h4>Minutes Needed:</h4>
+                <li th:text="${exercise.timeInMinutes}"></li>
+                <h4>Min Age:</h4>
+                <li th:text="${exercise.youngAge}"></li>
+                <h4>Max Age:</h4>
+                <li th:text="${exercise.oldAge}"></li>
+                <p class="exerciseDetailsDescription" th:text="${exercise.description}"></p>
+            </ul>
+        </section>
+
+<div class="prev-btn">
+    <a class="fas fa-chevron-left" href="/items">  back</a>
+</div>
+
+<footer>
+    &copy; Team Core-N-Tine 2020
+</footer>
+</body>
+</html>

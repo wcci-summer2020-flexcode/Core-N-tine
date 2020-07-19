@@ -11,7 +11,7 @@
 html{
     font-family: "Lato", Arial, sans-serif;
 }
-h1{
+h1, h2{
     text-align: center;
 }
 
@@ -116,4 +116,61 @@ footer{
 
 img {
     max-height: 200px;
+}
+
+#itemsList{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin: 1em 1em;
+    padding: 1em 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+#itemsList h3{
+   padding-bottom: 0.5em;
+}
+
+#itemsList img{
+    box-shadow: 5px 5px 5px grey;
+}
+
+.checkboxContainer{
+    padding: 0.5em 1em;
+}
+
+
+.exercise-details-title{
+    display: grid;
+    /*grid-template-columns: repeat(3, 2fr);*/
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin: 1em 1em;
+    padding: 1em 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+#exerciseListHiddenFields  img{
+    border: 3px solid #ffff;
+}
+
+.browseAllExercises{
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 1px 1px;
+    letter-spacing: 1px;
+
+}
+.browseAllExercises a {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 1px 80px;
 }

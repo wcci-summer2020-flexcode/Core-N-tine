@@ -23,6 +23,8 @@ public class Exercise {
     private Collection<Item> items;
     @ManyToMany
     private Collection<Muscle> muscles;
+    @ManyToMany
+    private Collection<ExercisePlan> exercisePlans;
 
     public Long getId() {
         return id;

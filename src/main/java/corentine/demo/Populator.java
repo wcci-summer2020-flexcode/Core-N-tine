@@ -1,6 +1,7 @@
 package corentine.demo;
 
 import corentine.demo.models.Exercise;
+import corentine.demo.models.ExercisePlan;
 import corentine.demo.models.Item;
 import corentine.demo.models.Muscle;
 import corentine.demo.repository.ExerciseRepository;
@@ -106,5 +107,6 @@ public class Populator implements CommandLineRunner {
         muscleRepo.save(quads);
         muscleRepo.save(calves);
         muscleRepo.save(glutes);
+
     }
 }

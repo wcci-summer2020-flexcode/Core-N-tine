@@ -2,11 +2,12 @@ package corentine.demo;
 
 import corentine.demo.models.Exercise;
 import corentine.demo.models.Item;
+import corentine.demo.models.Muscle;
 import corentine.demo.repository.ExerciseRepository;
 import corentine.demo.repository.ItemRepository;
+import corentine.demo.repository.MuscleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.Resource;
 
 @Component
@@ -16,6 +17,8 @@ public class Populator implements CommandLineRunner {
     private ExerciseRepository exerciseRepo;
     @Resource
     private ItemRepository itemRepo;
+    @Resource
+    private MuscleRepository muscleRepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -85,5 +88,23 @@ public class Populator implements CommandLineRunner {
         exerciseRepo.save(flutterKick);
         exerciseRepo.save(russianTwist);
         exerciseRepo.save(bicycleCrunch);
+
+        Muscle triceps = new Muscle("Triceps", tricepsChairDip, tricepsStairDip, mountainClimber, farmersWalk, bentOverRow, jugClean, pushUps);
+        Muscle biceps = new Muscle("Biceps", bicepCurls, farmersWalk, bentOverRow);
+        Muscle chest = new Muscle("Chest", tricepsChairDip, tricepsStairDip, farmersWalk, bentOverRow, pushUps);
+        Muscle back = new Muscle("Back", tricepsChairDip, chairPlank, tricepsStairDip, mountainClimber, farmersWalk, bentOverRow, jugClean, plank, sitUps);
+        Muscle abs = new Muscle("Abs", chairPlank, legLift, mountainClimber, farmersWalk, jugClean, wallSit, plank, pushUps, sitUps, crunches, squats, flutterKick, russianTwist, bicycleCrunch);
+        Muscle quads = new Muscle("Quads", quickFeet, stepUp, skaterSteps, doubleStepUp, splitSquat, gobletSquat, farmersWalk, jugClean, wallSit, jumpingJacks, squats, walkingLunges, flutterKick, bicycleCrunch);
+        Muscle calves = new Muscle("Calves", quickFeet, stepUp, skaterSteps, doubleStepUp, gobletSquat, farmersWalk, jugClean, wallSit, squats, calfRaises);
+        Muscle glutes = new Muscle("Glutes", quickFeet, stepUp, skaterSteps, doubleStepUp, splitSquat, gobletSquat, farmersWalk, jugClean, wallSit, sitUps, jumpingJacks, squats, walkingLunges, flutterKick);
+
+        muscleRepo.save(triceps);
+        muscleRepo.save(biceps);
+        muscleRepo.save(chest);
+        muscleRepo.save(back);
+        muscleRepo.save(abs);
+        muscleRepo.save(quads);
+        muscleRepo.save(calves);
+        muscleRepo.save(glutes);
     }
 }

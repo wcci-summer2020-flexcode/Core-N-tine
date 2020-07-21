@@ -14,6 +14,7 @@ public class Exercise {
     private Long id;
     private String name;
     private String imageUrl;
+    private String videoUrl;
     private int timeInMinutes;
     private int youngAge;
     private int oldAge;
@@ -38,6 +39,8 @@ public class Exercise {
         return imageUrl;
     }
 
+    public String getVideoUrl() {return videoUrl;}
+
     public int getTimeInMinutes() {return timeInMinutes;}
     public int getYoungAge(){return youngAge;}
     public int getOldAge() {return oldAge;}
@@ -52,9 +55,10 @@ public class Exercise {
 
     public Exercise() { }
 
-    public Exercise(String name, String imageUrl, String description, int timeInMinutes, int youngAge, int oldAge,  Item... items) {
+    public Exercise(String name, String imageUrl, String videoUrl, String description, int timeInMinutes, int youngAge, int oldAge,  Item... items) {
         this.name = name;
         this.imageUrl = imageUrl;
+        this.videoUrl = videoUrl;
         this.description = description;
         this.timeInMinutes = timeInMinutes;
         this.youngAge = youngAge;

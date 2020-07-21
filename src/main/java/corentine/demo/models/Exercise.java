@@ -21,6 +21,8 @@ public class Exercise {
     private String description;
     @ManyToMany
     private Collection<Item> items;
+    @ManyToMany
+    private Collection<Muscle> muscles;
 
     public Long getId() {
         return id;

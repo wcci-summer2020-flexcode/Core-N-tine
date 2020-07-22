@@ -1,6 +1,7 @@
 package corentine.demo;
 
 import corentine.demo.models.Exercise;
+import corentine.demo.models.ExercisePlan;
 import corentine.demo.models.Item;
 import corentine.demo.models.Muscle;
 import corentine.demo.repository.ExerciseRepository;
@@ -27,11 +28,18 @@ public class Populator implements CommandLineRunner {
         Item stairs = new Item("Stairs", "/images/stairs.jpg");
         Item jugs = new Item("Jugs", "/images/jug.jpg");
         Item room = new Item("Empty Room", "/images/room.jpg");
+        Item paperPlates = new Item("Paper Plates", "/images/paperplates.jfif");
+        Item pillow = new Item("Pillow", "/images/pillow.jfif");
+        Item pvcPipe = new Item("PVC Pipe", "/images/pvcpipe.jpg");
+
 
         itemRepo.save(chair);
         itemRepo.save(stairs);
         itemRepo.save(jugs);
         itemRepo.save(room);
+        itemRepo.save(paperPlates);
+        itemRepo.save(pillow);
+        itemRepo.save(pvcPipe);
 
         Exercise tricepsChairDip = new Exercise("Triceps Chair Dip", "/images/tricepsChairDip.gif","https://www.youtube.com/embed/3ydgLFLK8e0" ,"Put your hands on the edge of the seat of the chair. While in a sitting position hold yourself up in front of the chair. Slowly bend your elbows as much as you can, then return to the starting position. Repeat this motion up to 20 times.", 5, 3, 80, chair);
         Exercise chairPlank = new Exercise("Chair Plank", "/images/chairPlank.gif","https://www.youtube.com/embed/GMqoX8bDfDU" ,"Place your forearms in the seat of the chair and lock your fingers together. Stretch your body away from the chair hold yourself up on your toes. Be sure to keep your back straight. Hold this position up to 60 seconds.", 2, 5, 80,  chair);
@@ -60,6 +68,26 @@ public class Populator implements CommandLineRunner {
         Exercise flutterKick = new Exercise("Flutter Kicks", "/images/flutterKick.gif","https://www.youtube.com/embed/eEG9uXjx4vQ" ,"Lie on your back and extend your legs up to a 45-degree angle. Keeping your legs stick straight and glued together with your toes pointed, start lowering one leg. Raise your lowered leg and lower the other, focusing on keeping your core engaged. Continue the movement, alternating between legs.", 1, 10, 60, room);
         Exercise russianTwist = new Exercise("Russian Twist", "/images/russianTwist.gif","https://www.youtube.com/embed/JyUqwkVpsi8" ,"Sit with bent knees and your feet pressing firmly into the floor, holding a dumbbell in each hand next to your chest. Sit back slightly, keeping your spine straight. Exhale as you twist to the left, punching your right arm over to the left side. Inhale back to center, and then do the opposite side.", 1, 10, 60, room);
         Exercise bicycleCrunch = new Exercise("Bicycle Crunch", "/images/bicycleCrunch.gif","https://www.youtube.com/embed/eBZ4rdDjLFM" ,"Lie flat on the floor with your lower back pressed to the ground. Put your hands behind your head, then bring your knees in towards your chest and lift your shoulder blades off the ground, but be sure not to pull on your neck. Straighten your right leg out to about a 45-degree angle to the ground while turning your upper body to the left, bringing your right elbow towards the left knee. Make sure your rib cage is moving and not just your elbows. Now switch sides and do the same motion on the other side to complete one rep.", 1, 10, 60, room);
+        Exercise slidingBurpee = new Exercise("Sliding Burpee", "/images/slidingburpee.jpg", "https://www.youtube.com/embed/qvWpWU5c3a8", "Stand with the balls of your feet on paper plates. Push your hips back, bend your knees, and lower into a squat. Place your hands on the floor. Slide your feet out to a plank position. Quickly bend your knees and slide your feet back into your hands. Return to standing. That's one rep. Do 15 reps total.", 5, 10, 60, paperPlates);
+        Exercise slidingPushupJack = new Exercise("Sliding Pushup Jack", "/images/slidingpushupjack.jpg", "https://www.youtube.com/embed/PwPdFhJkwvk", "With the plates under your feet, squat down to the floor, placing your hands wider than shoulder-width apart. Slide your feet into a wide V as you lower your body into a pushup. As you press up, bend your legs and slide your knees into your hands, tucking them into your chest. That's one rep. Do 10 reps total.", 5, 10, 70, paperPlates);
+        Exercise slidingThighSlimmer = new Exercise("Sliding Thigh Slimmer", "/images/slidingthighslimmer.jpg", "https://www.youtube.com/embed/wAhMhzVDH4M", "Begin in a runner's lunge with your right leg forward, hands on either side of your right foot, and left leg straight (the paper plate should be under your left foot). Bend your left knee and slide your leg into your chest, squeezing your knees together. Quickly extend your left leg back out to your full lunge. That's one rep. Do 15 reps on the right leg, 15 on the left.", 3, 10, 60, paperPlates);
+        Exercise slidingTricepsPushup = new Exercise("Sliding Triceps Pushup", "/images/slidingtricepspushup.jpg", "https://www.youtube.com/embed/FHnE8As1cSg", "Begin at the top of a modified pushup position with your hands on the plates, shoulder-width apart. Bend your left elbow and lower into a pushup (keeping your arm close to your body) as you slide your right arm straight out on the floor. Press back up, sliding your right arm in. That's one rep. Do 15 reps total, alternating arms each time.", 5, 10, 70, paperPlates);
+        Exercise slidingSitUp = new Exercise("Sliding Sit Up", "/images/slidingsitup.jpg", "https://www.youtube.com/embed/pJZf9yfGIMk", "Lie on your back with your legs extended and together. Place your arms out to each side in a 'T' shape, with the plates under your palms. Keeping your arms straight and elbows soft, press down and slide your arms in by your sides as you sit up and bend your knees. Slide back out and return to your start position. That's one rep. Do 15 reps total.", 3, 10, 70, paperPlates);
+        Exercise heelCurlCrunch = new Exercise("Heel Curl Crunch", "/images/heelcurlcrunch.jpg", "https://www.youtube.com/embed/bHNgRvTk5PA", "Sit with your hands behind your head, spine straight. Bend your knees and flex your feet so that just your heels are pressed into the plates. Slide your legs out straight as you hinge back, lowering all the way down to the floor with your body, sliding your legs out into a wide 'V' position. Bend your knees and use your abs to return to your starting position, sliding your heels into your body as you sit up. That's one rep. Do 15 reps total.", 5, 12, 70, paperPlates);
+        Exercise legDarts = new Exercise("Leg Darts", "/images/legdart.jpg", "https://www.youtube.com/embed/GeWKYPqV3A8", "Lie on your stomach with your legs together. Arms along your sides. Lift your abdominal muscles away from the mat. Inhale. Exhale. Keep your abdominal muscles pulled in. Extend energy through your spine and out the top of your head to lift your upper body slightly off the mat. Anchor your pubic bone to the mat to protect your lower back. Your legs and glutes are engaged as part of the stability of the lower body but don't over-squeeze them. Your head is an extension of your spine. Your gaze will be down. Your shoulder blades will slide down your back as your arms reach behind you like they are being blown back. Hold for an inhale. Exhale to lengthen and lower your body to the floor. Repeat this exercise three times.", 5, 8, 70,pillow);
+        Exercise halfRollLegLifts = new Exercise("Half Roll Back Leg Lifts", "/images/halfleglifts.jfif", "https://www.youtube.com/embed/UU1c3vX-PMs", "Start on all fours with the hands under the shoulders and the knees under the hips. Extend one leg behind you. Lift the leg to hip level and then slowly lower it back down. Repeat with the opposite leg until set is complete.", 5, 10, 70, pillow);
+        Exercise pillowTwist = new Exercise("Pillow Twist", "/images/pillowtwist.jfif", "https://www.youtube.com/embed/rCgGlW8I5MI", "Lay flat on your back with the pillow above your chest and your arms and abs engaged. Pull your knees in toward you and lift up your chest using the power from your abdominals and your hip flexors. Maintain a strong boat position as you twist from the belly to face the left side, then the right.", 5, 10, 80, pillow);
+        Exercise extendLegs = new Exercise("Extend Legs", "/images/extendlegs.jfif", "https://www.youtube.com/embed/HKDFDsGBk5k", "Place a pillow between your knees and squeeze thigh muscles. Squat down by bending from your hips and pushing your buttocks backwards. Keep your back flat and squeeze the pillow with your knees. Keep your thigh muscles tight throughout the movement.", 5, 8, 80, pillow);
+        Exercise abTuck = new Exercise("Ab Tuck with Pillow Pass", "/images/abtuck.jfif", "https://www.youtube.com/embed/ZJrmX7X-qtw", "Legs together and bent, feet off the ground – crunch up to put the pillow between your legs, extend and then take the pillow and bring it over your head", 5, 8, 70, pillow);
+        Exercise sidePlank = new Exercise("Side Plank with Reach Under", "/images/sideplank.jfif", "https://www.youtube.com/embed/EvPhjA3N1fw", "into a side plank position, passing the pillow under your side and bringing up into the air", 5, 8, 90, pillow);
+        Exercise passThrough = new Exercise("PVC Pass-Through", "/images/pvcpassthrough.jfif", "https://www.youtube.com/embed/fN84_sH7sAM", "Hold the PVC horizontally in front of hips with arms straight and hands in snatch grip (about a hands length outside of hips, palms facing hips). Tuck tail under, squeeze glutes, engage core, and think about pulling the pipe into hips by squeezing shoulder blades back and down to start. With arms straight, slowly rotate pipe up, overhead, and behind hips (or as low as possible). If you have issues getting the pipe overhead, widen your grip. Keeping arms straight, slowly bring the pipe back to front. That's one rep.", 5, 12, 60, pvcPipe);
+        Exercise figure8 = new Exercise("Figure 8", "/images/figure8.jfif", "https://www.youtube.com/embed/bHHT3RMQ0pI", "Start in the same position as PVC pass-through: pipe at hips, arms straight, hands in wide grip, glutes and core engaged. Actively pull on the PVC as if pulling it apart. Then, keeping arms straight, bring the left arm overhead and then down behind hips. Then, do the same with the right arm. Slowly return each arm to the front, one at a time. That's one rep. Repeat, blending movements together into one fluid motion.", 10, 12, 60, pvcPipe);
+        Exercise shoulderFlexionStretch = new Exercise("PVC Pipe Shoulder Flexion Stretch", "/images/shoulderstretch.jfif", "https://www.youtube.com/embed/8drTcsh9Loo", "Start in a half-kneeling position, left leg forward and right leg back. Balance the pipe on one end, to the right of the left foot. Choke-up on the PVC pipe with the right hand, about level with your eyes.Hinge at hips and sink chest down until you feel a stretch in your shoulder. Contract the shoulder as if you're trying to push the pipe into the ground. Hold for 10 to 20 seconds. Release. That's one rep. Repeat on the other side.", 10, 10, 70, pvcPipe);
+        Exercise pipeLean = new Exercise("PVC Pipe Lean", "/images/pipelean.jfif", "https://www.youtube.com/embed/QDGYYeHPd7E", "Hold the PVC pipe vertically along spine so that it's touching the back of head, between shoulder blades, and tailbone. Keeping pipe in contact with each touch point, hinge at the hips so that upper body is leaning forward. Keep knees straight but not locked. Continue bending until you feel tension at back of legs or just before the pipe detaches from one of the points of contact. Slowly lift chest to return to start.", 10,  10, 65, pvcPipe);
+        Exercise frontSquat = new Exercise("PVC Pipe Front Squat", "/images/pvcfrontsquat.jfif", "https://www.youtube.com/embed/_5DJOO6OGSs", "Hold the PVC pipe in front rack position so that the pipe rests horizontally across the chest, with fingers and thumbs loosely wrapped around the pipe, fingers pointing backward toward shoulders. Rotate elbows until they are parallel to the floor (or as close to that as possible) to start. Do an air squat while keeping elbows high. Keeping chest up, continue squatting until hips go below parallel or form is compromised, whichever comes first. Then, keeping weight in heels, stand to return to start.", 5, 12, 70, pvcPipe);
+        Exercise overheadSquat = new Exercise("PVC Overhead Squat", "/images/overheadsquat.jfif", "https://www.youtube.com/embed/TjIBLuaVw3M", "Stand with feet slightly wider than hip-width apart. Hold the PVC pipe with a wide grip, then lock arms out overhead. Squeeze glutes, engage your core, and tuck your ribs under to start. Initiate the squat by sending hips back and bending knees. Slowly descend, maintaining tightness in the upper back, and without letting the pipe go too far in front or behind the center line. Push up on the PVC pipe as if trying to touch the ceiling. Keeping chest tall, continue squatting until you break parallel or your form is compromised, whichever comes first. Then, press through the midfoot to stand.", 10, 12, 60, pvcPipe);
+
+
 
         exerciseRepo.save(tricepsChairDip);
         exerciseRepo.save(chairPlank);
@@ -88,15 +116,33 @@ public class Populator implements CommandLineRunner {
         exerciseRepo.save(flutterKick);
         exerciseRepo.save(russianTwist);
         exerciseRepo.save(bicycleCrunch);
+        exerciseRepo.save(slidingBurpee);
+        exerciseRepo.save(slidingPushupJack);
+        exerciseRepo.save(slidingThighSlimmer);
+        exerciseRepo.save(slidingTricepsPushup);
+        exerciseRepo.save(slidingSitUp);
+        exerciseRepo.save(heelCurlCrunch);
+        exerciseRepo.save(legDarts);
+        exerciseRepo.save(halfRollLegLifts);
+        exerciseRepo.save(pillowTwist);
+        exerciseRepo.save(extendLegs);
+        exerciseRepo.save(abTuck);
+        exerciseRepo.save(sidePlank);
+        exerciseRepo.save(passThrough);
+        exerciseRepo.save(figure8);
+        exerciseRepo.save(shoulderFlexionStretch);
+        exerciseRepo.save(pipeLean);
+        exerciseRepo.save(frontSquat);
+        exerciseRepo.save(overheadSquat);
 
-        Muscle triceps = new Muscle("Triceps", tricepsChairDip, tricepsStairDip, mountainClimber, farmersWalk, bentOverRow, jugClean, pushUps);
-        Muscle biceps = new Muscle("Biceps", bicepCurls, farmersWalk, bentOverRow);
-        Muscle chest = new Muscle("Chest", tricepsChairDip, tricepsStairDip, farmersWalk, bentOverRow, pushUps);
-        Muscle back = new Muscle("Back", tricepsChairDip, chairPlank, tricepsStairDip, mountainClimber, farmersWalk, bentOverRow, jugClean, plank, sitUps);
-        Muscle abs = new Muscle("Abs", chairPlank, legLift, mountainClimber, farmersWalk, jugClean, wallSit, plank, pushUps, sitUps, crunches, squats, flutterKick, russianTwist, bicycleCrunch);
-        Muscle quads = new Muscle("Quads", quickFeet, stepUp, skaterSteps, doubleStepUp, splitSquat, gobletSquat, farmersWalk, jugClean, wallSit, jumpingJacks, squats, walkingLunges, flutterKick, bicycleCrunch);
-        Muscle calves = new Muscle("Calves", quickFeet, stepUp, skaterSteps, doubleStepUp, gobletSquat, farmersWalk, jugClean, wallSit, squats, calfRaises);
-        Muscle glutes = new Muscle("Glutes", quickFeet, stepUp, skaterSteps, doubleStepUp, splitSquat, gobletSquat, farmersWalk, jugClean, wallSit, sitUps, jumpingJacks, squats, walkingLunges, flutterKick);
+        Muscle triceps = new Muscle("Triceps", tricepsChairDip, tricepsStairDip, mountainClimber, farmersWalk, bentOverRow, jugClean, pushUps, slidingBurpee, slidingPushupJack, slidingTricepsPushup, slidingSitUp);
+        Muscle biceps = new Muscle("Biceps", bicepCurls, farmersWalk, bentOverRow,slidingBurpee, slidingTricepsPushup, slidingSitUp);
+        Muscle chest = new Muscle("Chest", tricepsChairDip, tricepsStairDip, farmersWalk, bentOverRow, pushUps, slidingPushupJack, slidingTricepsPushup, passThrough, figure8, overheadSquat);
+        Muscle back = new Muscle("Back", tricepsChairDip, chairPlank, tricepsStairDip, mountainClimber, farmersWalk, bentOverRow, jugClean, plank, sitUps, slidingBurpee, slidingTricepsPushup, slidingSitUp, pipeLean, overheadSquat);
+        Muscle abs = new Muscle("Abs", chairPlank, legLift, mountainClimber, farmersWalk, jugClean, wallSit, plank, pushUps, sitUps, crunches, squats, flutterKick, russianTwist, bicycleCrunch, slidingBurpee, slidingPushupJack, slidingTricepsPushup, slidingSitUp, heelCurlCrunch, legDarts, halfRollLegLifts, pillowTwist, extendLegs, abTuck, sidePlank);
+        Muscle quads = new Muscle("Quads", quickFeet, stepUp, skaterSteps, doubleStepUp, splitSquat, gobletSquat, farmersWalk, jugClean, wallSit, jumpingJacks, squats, walkingLunges, flutterKick, bicycleCrunch, slidingThighSlimmer, shoulderFlexionStretch, frontSquat);
+        Muscle calves = new Muscle("Calves", quickFeet, stepUp, skaterSteps, doubleStepUp, gobletSquat, farmersWalk, jugClean, wallSit, squats, calfRaises, slidingThighSlimmer);
+        Muscle glutes = new Muscle("Glutes", quickFeet, stepUp, skaterSteps, doubleStepUp, splitSquat, gobletSquat, farmersWalk, jugClean, wallSit, sitUps, jumpingJacks, squats, walkingLunges, flutterKick, slidingThighSlimmer);
 
         muscleRepo.save(triceps);
         muscleRepo.save(biceps);
@@ -106,5 +152,6 @@ public class Populator implements CommandLineRunner {
         muscleRepo.save(quads);
         muscleRepo.save(calves);
         muscleRepo.save(glutes);
+
     }
 }

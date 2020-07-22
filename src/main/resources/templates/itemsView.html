@@ -44,6 +44,16 @@
         <h3 class="itemChair"><label class="checkboxContainer"><input id="jugsBox" type="checkbox" onclick="showJugs()"><span class="checkmark"></span></label>Jugs</h3>
         <img src="images/jug.jpg">
     </div>
+
+    <div id="listContainer4">
+        <h3 class="itemPVC"><label class="checkboxContainer"><input id="pvcBox" type="checkbox" onclick="showPVC()"><span class="checkmark"></span></label>PVC Pipe</h3>
+        <img src="images/pvcpipe.jfif">
+    </div>
+
+    <div id="listContainer5">
+        <h3 class="itemPaperPlates"><label class="checkboxContainer"><input id="platesBox" type="checkbox" onclick="showPlates()"><span class="checkmark"></span> </label>Paper Plates</h3>
+        <img src="images/paperplates.jfif">
+    </div>
 </div>
 
 <!--Hidden fields of exercises-->
@@ -76,6 +86,21 @@
             <img th:src="${exercise.imageUrl}">
         </h3>
     </div>
+
+    <div id="hiddenField4" style="display:none">
+        <h2 class="selectItems">Step II - Choose an exercises</h2>
+        <h3 class="exercise-details-title" th:each="exercise:${pvcPipe.exercises}"> <a th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
+            <img th:src="${exercise.imageUrl}">
+        </h3>
+    </div>
+
+    <div id="hiddenField5" style="display:none">
+    <h2 class="selectItems">Step II - Choose an exercises</h2>
+    <h3 class="exercise-details-title" th:each="exercise:${paperPlates.exercises}"> <a th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
+        <img th:src="${exercise.imageUrl}">
+    </h3>
+</div>
+
 </div>
 
 <!--BUTTON-->

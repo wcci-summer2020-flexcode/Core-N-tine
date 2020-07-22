@@ -15,13 +15,13 @@ public class ExercisePlanController {
     @Resource
     private ExercisePlanRepository exercisePlanRepo;
 
-    @RequestMapping({"/muscles"})
+    @RequestMapping({"/exerciseplan"})
     public String displayAllMuscles(Model model){
         model.addAttribute("muscles", exercisePlanRepo.findAll());
-        return "exercisePlanView";
+        return "exercisePlansView";
     }
 
-    @RequestMapping("/muscle/{id}")
+    @RequestMapping("/exerciseplan/{id}")
     public String displaySingleMuscle(@PathVariable long id, Model model) {
         Optional<ExercisePlan> retrievedPlan = exercisePlanRepo.findById(id);
         ExercisePlan foundPlan = retrievedPlan.get();

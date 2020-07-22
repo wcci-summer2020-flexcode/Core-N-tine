@@ -46,3 +46,27 @@ function showJugs(checked) {
         text.style.display = "none";
     }
 }
+
+function showPVC(checked){
+
+    const checkBox = document.getElementById("pvcBox");
+    const text = document.getElementById("hiddenField4");
+
+    if (checkBox.checked === true) {
+        text.style.display = "block";
+    } else {
+        text.style.display = "none";
+    }
+}
+
+function showPlates(checked){
+
+    const checkBox = document.getElementById("platesBox");
+    const text = document.getElementById("hiddenField5");
+
+    if (checkBox.checked === true) {
+        text.style.display = "block";
+    } else {
+        text.style.display = "none";
+    }
+}

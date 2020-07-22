@@ -28,6 +28,8 @@ public class ItemController {
         model.addAttribute("stairs", itemRepo.findItemByName("Stairs"));
         model.addAttribute("jugs", itemRepo.findItemByName("Jugs"));
         model.addAttribute("room", itemRepo.findItemByName("Empty Room"));
+        model.addAttribute("pvcPipe", itemRepo.findItemByName("PVC Pipe"));
+        model.addAttribute("paperPlates", itemRepo.findItemByName("Paper Plates"));
         return "itemsView";
     }
 

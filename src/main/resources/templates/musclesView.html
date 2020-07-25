@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="/css/musclesView.css">
+    <title>Muscles List</title>
+</head>
+
+<body>
+<img class="logo" src="/images/logo.transparent.gif">
+<nav>
+    <ul class="main_menu">
+        <li><a href="/home.html" class="cool-link">HOME</a></li>
+        <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a> </li>
+        <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
+        <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
+    </ul>
+</nav>
+
+<div id="listMuscles">
+    <h3 class="musclesHeader">List of Muscle Areas You Would Like to Improve:</h3>
+    <h3 class="listOfMuscles" th:each="muscle:${muscles}"><a th:href="@{'/muscles/' +
+        ${muscle.name}}" th:text="${muscle.name}">Muscle</a></h3>
+</div>
+
+<footer>
+    &copy; Team Core-N-Tine 2020
+</footer>
+</body>
+</html>

@@ -4,12 +4,14 @@ import corentine.demo.models.Exercise;
 import corentine.demo.models.ExercisePlan;
 import corentine.demo.models.Item;
 import corentine.demo.models.Muscle;
+import corentine.demo.repository.ExercisePlanRepository;
 import corentine.demo.repository.ExerciseRepository;
 import corentine.demo.repository.ItemRepository;
 import corentine.demo.repository.MuscleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 @Component
@@ -21,6 +23,8 @@ public class Populator implements CommandLineRunner {
     private ItemRepository itemRepo;
     @Resource
     private MuscleRepository muscleRepo;
+    @Resource
+    private ExercisePlanRepository exercisePlanRepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -214,6 +218,8 @@ public class Populator implements CommandLineRunner {
         ArrayList<Muscle> overheadSquatMuscles = new ArrayList<>();
         overheadSquatMuscles.add(chest);
         overheadSquatMuscles.add(back);
+        ArrayList<Muscle> restMuscles = new ArrayList<>();
+        restMuscles.add(abs);
 
         Exercise tricepsChairDip = new Exercise("Triceps Chair Dip", "/images/tricepsChairDip.gif","https://www.youtube.com/embed/3ydgLFLK8e0" ,"Put your hands on the edge of the seat of the chair. While in a sitting position hold yourself up in front of the chair. Slowly bend your elbows as much as you can, then return to the starting position. Repeat this motion up to 20 times.", 5, 3, 80, tricepsChairDipMuscles, chair);
         Exercise chairPlank = new Exercise("Chair Plank", "/images/chairPlank.gif","https://www.youtube.com/embed/GMqoX8bDfDU" ,"Place your forearms in the seat of the chair and lock your fingers together. Stretch your body away from the chair hold yourself up on your toes. Be sure to keep your back straight. Hold this position up to 60 seconds.", 2, 5, 80, chairPlankMuscles, chair);
@@ -260,6 +266,7 @@ public class Populator implements CommandLineRunner {
         Exercise pipeLean = new Exercise("PVC Pipe Lean", "/images/pipelean.jfif", "https://www.youtube.com/embed/QDGYYeHPd7E", "Hold the PVC pipe vertically along spine so that it's touching the back of head, between shoulder blades, and tailbone. Keeping pipe in contact with each touch point, hinge at the hips so that upper body is leaning forward. Keep knees straight but not locked. Continue bending until you feel tension at back of legs or just before the pipe detaches from one of the points of contact. Slowly lift chest to return to start.", 10,  10, 65, pipeLeanMuscles, pvcPipe);
         Exercise frontSquat = new Exercise("PVC Pipe Front Squat", "/images/pvcfrontsquat.jfif", "https://www.youtube.com/embed/_5DJOO6OGSs", "Hold the PVC pipe in front rack position so that the pipe rests horizontally across the chest, with fingers and thumbs loosely wrapped around the pipe, fingers pointing backward toward shoulders. Rotate elbows until they are parallel to the floor (or as close to that as possible) to start. Do an air squat while keeping elbows high. Keeping chest up, continue squatting until hips go below parallel or form is compromised, whichever comes first. Then, keeping weight in heels, stand to return to start.", 5, 12, 70, frontSquatMuscles, pvcPipe);
         Exercise overheadSquat = new Exercise("PVC Overhead Squat", "/images/overheadsquat.jfif", "https://www.youtube.com/embed/TjIBLuaVw3M", "Stand with feet slightly wider than hip-width apart. Hold the PVC pipe with a wide grip, then lock arms out overhead. Squeeze glutes, engage your core, and tuck your ribs under to start. Initiate the squat by sending hips back and bending knees. Slowly descend, maintaining tightness in the upper back, and without letting the pipe go too far in front or behind the center line. Push up on the PVC pipe as if trying to touch the ceiling. Keeping chest tall, continue squatting until you break parallel or your form is compromised, whichever comes first. Then, press through the midfoot to stand.", 10, 12, 60, overheadSquatMuscles, pvcPipe);
+        Exercise rest = new Exercise("Rest", "", "", "Take a day of rest. You deserve it!", 0, 0, 0, restMuscles, room);
 
         exerciseRepo.save(tricepsChairDip);
         exerciseRepo.save(chairPlank);
@@ -306,8 +313,31 @@ public class Populator implements CommandLineRunner {
         exerciseRepo.save(pipeLean);
         exerciseRepo.save(frontSquat);
         exerciseRepo.save(overheadSquat);
+        exerciseRepo.save(rest);
 
+        ArrayList<Exercise> beginnerDayOne = new ArrayList<>();
+        beginnerDayOne.add(tricepsChairDip);
+        beginnerDayOne.add(tricepsStairDip);
+        beginnerDayOne.add(pushUps);
+        beginnerDayOne.add(bentOverRow);
+        ArrayList<Exercise> beginnerDayTwo = new ArrayList<>();
+        beginnerDayTwo.add(rest);
+        ArrayList<Exercise> beginnerDayThree = new ArrayList<>();
+        beginnerDayThree.add(plank);
+        beginnerDayThree.add(mountainClimber);
+        beginnerDayThree.add(bicepCurls);
+        beginnerDayThree.add(farmersWalk);
+        ArrayList<Exercise> beginnerDayFour = new ArrayList<>();
+        beginnerDayFour.add(rest);
+        ArrayList<Exercise> beginnerDayFive = new ArrayList<>();
+        beginnerDayFive.add(stepUp);
+        beginnerDayFive.add(gobletSquat);
+        beginnerDayFive.add(wallSit);
+        beginnerDayFive.add(jugClean);
 
+        ExercisePlan beginner = new ExercisePlan("Test 1", 3, beginnerDayOne, beginnerDayTwo, beginnerDayThree, beginnerDayFour, beginnerDayFive);
+
+        exercisePlanRepo.save(beginner);
 
     }
 }

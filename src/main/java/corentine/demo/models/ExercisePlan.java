@@ -17,8 +17,16 @@ public class ExercisePlan {
     private Long id;
     private String planName;
     private int amountOfDays;
-    @ManyToMany(mappedBy = "exercisePlans")
-    private Collection<Exercise> exercises;
+    @ManyToMany
+    private Collection<Exercise> dayOneExercises;
+    @ManyToMany
+    private Collection<Exercise> dayTwoExercises;
+    @ManyToMany
+    private Collection<Exercise> dayThreeExercises;
+    @ManyToMany
+    private Collection<Exercise> dayFourExercises;
+    @ManyToMany
+    private Collection<Exercise> dayFiveExercises;
 
     public Long getId() {
         return id;
@@ -28,16 +36,34 @@ public class ExercisePlan {
         return planName;
     }
 
-    public Collection<Exercise> getExercises() {
-        return exercises;
+    public Collection<Exercise> getDayOneExercises() {
+        return dayOneExercises;
+    }
+
+    public Collection<Exercise> getDayTwoExercises() {
+        return dayTwoExercises;
+    }
+
+    public Collection<Exercise> getDayThreeExercises() {
+        return dayThreeExercises;
+    }
+
+    public Collection<Exercise> getDayFourExercises() { return dayFourExercises; }
+
+    public Collection<Exercise> getDayFiveExercises() {
+        return dayFiveExercises;
     }
 
     public ExercisePlan(){}
 
-    public ExercisePlan(String planName, int amountOfDays, Exercise... exercises){
+    public ExercisePlan(String planName, int amountOfDays, Collection<Exercise> dayOneExercises, Collection<Exercise> dayTwoExercises, Collection<Exercise> dayThreeExercises, Collection<Exercise> dayFourExercises, Collection<Exercise> dayFiveExercises){
         this.planName = planName;
         this.amountOfDays = amountOfDays;
-        this.exercises = new ArrayList<>(Arrays.asList(exercises));
+        this.dayOneExercises = dayOneExercises;
+        this.dayTwoExercises = dayTwoExercises;
+        this.dayThreeExercises = dayThreeExercises;
+        this.dayFourExercises = dayFourExercises;
+        this.dayFiveExercises = dayFiveExercises;
     }
 
     @Override

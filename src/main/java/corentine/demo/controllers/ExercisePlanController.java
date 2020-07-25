@@ -14,18 +14,21 @@ import java.util.Optional;
 public class ExercisePlanController {
     @Resource
     private ExercisePlanRepository exercisePlanRepo;
+    @Resource
+    private ExercisePlanRepository exerciseRepo;
 
     @RequestMapping({"/exerciseplan"})
-    public String displayAllMuscles(Model model){
-        model.addAttribute("muscles", exercisePlanRepo.findAll());
+    public String displayAllExercisePlans(Model model){
+        model.addAttribute("exercisePlans", exercisePlanRepo.findAll());
         return "exercisePlansView";
     }
 
     @RequestMapping("/exerciseplan/{id}")
-    public String displaySingleMuscle(@PathVariable long id, Model model) {
+    public String displaySingleExercisePlan(@PathVariable long id, Model model) {
         Optional<ExercisePlan> retrievedPlan = exercisePlanRepo.findById(id);
         ExercisePlan foundPlan = retrievedPlan.get();
         model.addAttribute("exercisePlan", foundPlan);
+        System.out.println(retrievedPlan.get().getDayOneExercises());
         return "exercisePlanView";
     }
 }

@@ -25,7 +25,15 @@ public class Exercise {
     @ManyToMany
     private Collection<Muscle> muscles;
     @ManyToMany
-    private Collection<ExercisePlan> exercisePlans;
+    private Collection<ExercisePlan> dayOneExercises;
+    @ManyToMany
+    private Collection<ExercisePlan> dayTwoExercises;
+    @ManyToMany
+    private Collection<ExercisePlan> dayThreeExercises;
+    @ManyToMany
+    private Collection<ExercisePlan> dayFourExercises;
+    @ManyToMany
+    private Collection<ExercisePlan> dayFiveExercises;
 
     public Long getId() {
         return id;

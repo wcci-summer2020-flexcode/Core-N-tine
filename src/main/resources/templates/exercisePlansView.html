@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="/css/musclesView.css">
-    <title>Muscles List</title>
+    <link rel="stylesheet" href="/css/exercisesView.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
+    <title>Exercise Plans</title>
 </head>
 
 <body>
@@ -22,11 +22,14 @@
     </ul>
 </nav>
 
-<div id="listMuscles">
-    <h3 class="musclesHeader">List of Muscle Areas You Would Like to Improve:</h3>
-    <h3 class="listOfMuscles" th:each="muscle:${muscles}"><a th:href="@{'/muscles/' +
-        ${muscle.name}}" th:text="${muscle.name}">Muscle</a></h3>
-</div>
+<h2 class="exercisePlansHeader">Simply browse through all of our exercise plans</h2>
+
+<section class="exercisePlanDetails">
+
+    <ul th:each="exercisePlan:${exercisePlans}"><a th:href="@{'/exerciseplan/' + ${exercisePlan.id}}" th:text="${exercisePlan.planName}"></a></ul>
+
+</section>
+
 
 <footer>
     &copy; Team Core-N-Tine 2020

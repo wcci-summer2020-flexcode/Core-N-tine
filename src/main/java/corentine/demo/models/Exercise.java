@@ -49,13 +49,17 @@ public class Exercise {
         return description;
     }
 
+    public Collection<Muscle> getMuscles() {
+        return muscles;
+    }
+
     public Collection<Item> getItems() {
         return items;
     }
 
     public Exercise() { }
 
-    public Exercise(String name, String imageUrl, String videoUrl, String description, int timeInMinutes, int youngAge, int oldAge,  Item... items) {
+    public Exercise(String name, String imageUrl, String videoUrl, String description, int timeInMinutes, int youngAge, int oldAge, Collection<Muscle> muscles, Item... items) {
         this.name = name;
         this.imageUrl = imageUrl;
         this.videoUrl = videoUrl;
@@ -63,6 +67,7 @@ public class Exercise {
         this.timeInMinutes = timeInMinutes;
         this.youngAge = youngAge;
         this.oldAge = oldAge;
+        this.muscles = muscles;
         this.items = new ArrayList<>(Arrays.asList(items));
     }
 

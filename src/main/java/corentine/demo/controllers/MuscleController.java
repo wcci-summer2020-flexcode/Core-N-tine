@@ -22,11 +22,14 @@ public class MuscleController {
         return "musclesView";
     }
 
-    @RequestMapping("/muscle/{id}")
-    public String displaySingleMuscle(@PathVariable long id, Model model) {
-        Optional<Muscle> retrievedMuscle = muscleRepo.findById(id);
-        Muscle foundMuscle = retrievedMuscle.get();
-        model.addAttribute("muscle", foundMuscle);
+    @RequestMapping("/muscles/{name}")
+    public String displaySingleMuscle(@PathVariable String name, Model model) {
+//        Optional<Muscle> retrievedMuscle = muscleRepo.findById(id);
+//        Muscle foundMuscle = retrievedMuscle.get();
+        model.addAttribute("muscle", muscleRepo.findMuscleByName(name));
+        model.addAttribute("exercise", muscleRepo.findAll());
         return "muscleView";
     }
+
+
 }

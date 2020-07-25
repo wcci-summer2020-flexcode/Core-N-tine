@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="/css/muscleView.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
+    <title>Single Muscle</title>
+</head>
+<body>
+<img class="logo" src="/images/logo.transparent.gif">
+<nav>
+    <ul class="main_menu">
+        <li><a href="/home.html" class="cool-link">HOME</a></li>
+        <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a> </li>
+        <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
+        <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
+    </ul>
+</nav>
+
+<h1 class="headerTitle" th:text="${muscle.name}">Refactoring</h1>
+
+<section class="exerciseList">
+    <h2 class="exerciseListHeading">Here is the list of the Exercises:</h2>
+
+    <nav class="exerciseNavList">
+        <ul>
+            <li class="exerciseListLinkExercise" th:each="exercise:${muscle.exercises}">
+                <a class="exerciseListLinkExercise" th:href="@{'/exercise/' + ${exercise.id}}"
+                   th:text="${exercise.name}">Refactoring</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+
+<div class="prev-btn">
+    <!--    <i class="fas fa-chevron-left"></i>-->
+    <a class="fas fa-chevron-left" href="/muscles">  back</a>
+</div>
+
+</body>
+</html>

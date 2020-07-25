@@ -306,7 +306,8 @@ public class Populator implements CommandLineRunner {
         exerciseRepo.save(pipeLean);
         exerciseRepo.save(frontSquat);
         exerciseRepo.save(overheadSquat);
-        System.out.println("vjso5458457365ivjsonvsvos" + overheadSquat.getMuscles() + overheadSquat.getItems());
+
+
 
     }
 }

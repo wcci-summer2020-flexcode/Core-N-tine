@@ -13,7 +13,7 @@ public class Muscle {
     @GeneratedValue
     private Long id;
     private String name;
-    @ManyToMany
+    @ManyToMany(mappedBy = "muscles")
     private Collection<Exercise> exercises;
 
     public Long getId() {
@@ -30,8 +30,9 @@ public class Muscle {
 
     public Muscle() {  }
 
-    public Muscle(String name) {
+    public Muscle(String name, Exercise... exercises) {
         this.name = name;
+        this.exercises = new ArrayList<>(Arrays.asList(exercises));
     }
 
     @Override

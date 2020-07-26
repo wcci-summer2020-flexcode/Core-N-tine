@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="/css/exercisesView.css">
+    <link rel="stylesheet" href="/css/exercisePlanView.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
     <title>Exercise Plan</title>
 </head>
@@ -15,6 +15,7 @@
 <nav>
     <ul class="main_menu">
         <li><a href="/home.html" class="cool-link">HOME</a></li>
+        <li><a href="/exercises" class="cool-link">BROWSE ALL EXERCISES</a></li>
         <li><a href="/exerciseplan" class="cool-link">EXERCISE PLANS</a></li>
         <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
         <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
@@ -22,30 +23,41 @@
     </ul>
 </nav>
 
-<h2 class="exercisePlansHeader" th:text="${exercisePlan.planName}"></h2>
+<h1 class="exercisePlansHeader" th:text="${exercisePlan.planName}"></h1>
 
 <section class="exercisePlanDetails">
-
-    <h2>Day One</h2>
+<div id="listExercises">
+    <div>
+    <h2 class="exercisePlanDetailsListExercises">Day One</h2>
     <h3 class="exerciseDetailsName" th:each="exercise:${exercisePlan.dayOneExercises}">
         <a th:href="@{'/exercise/' + ${exercise.id}}" th:text="${exercise.name}"></a></h3>
+    </div>
 
-    <h2>Day Two</h2>
+    <div>
+    <h2  class="exercisePlanDetailsListExercises">Day Two</h2>
     <h3 class="exerciseDetailsName" th:each="exercise:${exercisePlan.dayTwoExercises}">
         <a th:href="@{'/exercise/' + ${exercise.id}}" th:text="${exercise.name}"></a></h3>
+    </div>
 
-    <h2>Day Three</h2>
+    <div>
+    <h2 class="exercisePlanDetailsListExercises">Day Three</h2>
     <h3 class="exerciseDetailsName" th:each="exercise:${exercisePlan.dayThreeExercises}">
         <a th:href="@{'/exercise/' + ${exercise.id}}" th:text="${exercise.name}"></a></h3>
+    </div>
 
-    <h2>Day Four</h2>
+    <div>
+    <h2 class="exercisePlanDetailsListExercises">Day Four</h2>
     <h3 class="exerciseDetailsName" th:each="exercise:${exercisePlan.dayFourExercises}">
     <a th:href="@{'/exercise/' + ${exercise.id}}" th:text="${exercise.name}"></a></h3>
+    </div>
 
-    <h2>Day Five</h2>
+    <div>
+    <h2 class="exercisePlanDetailsListExercises">Day Five</h2>
     <h3 class="exerciseDetailsName" th:each="exercise:${exercisePlan.dayFiveExercises}">
         <a th:href="@{'/exercise/' + ${exercise.id}}" th:text="${exercise.name}"></a></h3>
+    </div>
 
+</div>
 </section>
 
 

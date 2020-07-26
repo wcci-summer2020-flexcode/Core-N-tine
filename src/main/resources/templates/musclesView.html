@@ -15,6 +15,7 @@
 <nav>
     <ul class="main_menu">
         <li><a href="/home.html" class="cool-link">HOME</a></li>
+        <li><a href="/exercises" class="cool-link">BROWSE ALL EXERCISES</a></li>
         <li><a href="/exerciseplan" class="cool-link">EXERCISE PLANS</a></li>
         <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
         <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
@@ -24,8 +25,11 @@
 
 <div id="listMuscles">
     <h3 class="musclesHeader">List of Muscle Areas You Would Like to Improve:</h3>
-    <h3 class="listOfMuscles" th:each="muscle:${muscles}"><a th:href="@{'/muscles/' +
+    <div class="listMusclesDiv">
+    <h3 class="listOfMusclesThEach" th:each="muscle:${muscles}"><a th:href="@{'/muscles/' +
         ${muscle.name}}" th:text="${muscle.name}">Muscle</a></h3>
+    </div>
+
 </div>
 
 <footer>

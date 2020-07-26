@@ -75,9 +75,29 @@ footer{
     text-align: center;
 }
 
-#listMuscles{
+.listMusclesDiv{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
     margin: 1em 1em;
     padding: 1em 1em;
     justify-content: center;
     text-align: center;
+}
+
+.musclesHeader{
+    text-align: center;
+    font-size: 35px;
+}
+
+.listOfMusclesThEach{
+    font-size: 25px;
+    padding: 1em 1em;
+}
+
+.listOfMusclesThEach a{
+    text-decoration: none;
+
 }

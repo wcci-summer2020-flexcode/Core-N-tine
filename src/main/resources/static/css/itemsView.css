@@ -145,7 +145,21 @@ img {
 
 .exercise-details-title{
     display: grid;
-    /*grid-template-columns: repeat(3, 2fr);*/
+    /*grid-template-columns: repeat(2, 2fr);*/
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin: 1em 1em;
+    padding: 1em 1em;
+    justify-content: center;
+    text-align: center;
+    /*background-color: yellow;*/
+}
+
+
+#exercisesListHiddenFields{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
@@ -154,7 +168,6 @@ img {
     justify-content: center;
     text-align: center;
 }
-
 #exerciseListHiddenFields  img{
     border: 3px solid #ffff;
 }

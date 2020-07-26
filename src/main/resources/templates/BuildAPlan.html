@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="/css/exercisePlansView.css">
+    <link rel="stylesheet" href="/css/BuildAPlanStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
+    <title>Build Your Own Plan</title>
+</head>
+
+<body>
+<img class="logo" src="/images/logo.transparent.gif">
+<nav>
+    <ul class="main_menu">
+        <li><a href="/home.html" class="cool-link">HOME</a></li>
+        <li><a href="/exercises" class="cool-link">BROWSE ALL EXERCISES</a></li>
+        <li><a href="/exerciseplan" class="cool-link">EXERCISE PLANS</a></li>
+        <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
+        <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
+        <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
+    </ul>
+</nav>
+
+<h2>Build A Plan</h2>
+<div id="container">
+<form class="userInputForm" method="POST" th:action="'/buildaplan/add-plan'">
+<input name="planName" type="text">Plan Name<br>
+    <input name="amountOfDays" type="number">Number Of Days<br>
+    <select id="exerciseName1" name="exerciseName1" multiple size="4">
+    <option th:each="exercise:${exercises}" th:text="${exercise.name}">
+        <input name="exerciseId" type="hidden" th:value="${exercise.id}">
+    </option></select>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!--<form class="example" action="/exercise/{id}">-->
+<!--    <input type="text" placeholder="Search.." name="search">-->
+<!--    <button type="submit"><i class="fa fa-search"></i></button>-->
+<!--</form>-->

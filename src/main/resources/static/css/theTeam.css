@@ -11,26 +11,23 @@
 html{
     font-family: "Lato", Arial, sans-serif;
 }
-h1, h2, h3 {
+h1, h2, h3{
     text-align: center;
 }
 
 h2{
-    padding: 1em 1em;
-    font-weight: bolder;
-}
-
-h3{
     padding: 0.5em 1em;
     color: #06bb34;
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 3em;
 }
 
-h4{
-    color: #06bb34;
-}
+h3{
+    font-weight: bolder;
+   font-size: 30px;
+    padding-bottom: 0.5em;
 
+}
 .main_menu{
     letter-spacing: 1px;
     position: relative;
@@ -84,85 +81,45 @@ footer{
     line-height: 32px;
     font-weight: bolder;
     font-size: 18px;
-
 }
 
-.exerciseDetails{
-    justify-content: center;
-    text-align: center;
+.fa {
+    padding: 0.5em 1em;
+    font-size: 50px;  /*this thing does not work*/
 }
 
-.exerciseDetailsDescription{
+article a {
+    text-decoration: none;
+    color: #06bb34;
+    font-size: 50px; /*this thing does not work*/
+}
+
+.teamImage{
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+}
+
+.teamParagraph{
     text-align: center;
-    padding: 3px 0px;
     margin: 1em 1em;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.exercise-details-minANDage{
     font-size: 18px;
     font-weight: bolder;
     letter-spacing: 1px;
 }
 
-.exerciseDetails img{
-    border: 3px solid #ffff;
-}
-
-.exerciseDetailsName{
-    padding: 0.5em 1em;
-}
-
-.prev-btn{
-    padding: 10px;
-    position: absolute;
-    top: 25%;
-    transform: translateY(-50%);
-    font-size: 35px;
-    /*z-index: 100;*/
-    cursor: pointer;
-    transition: 400ms;
-}
-
-.prev-btn:hover{
-    font-size: 40px;
-}
-
-.prev-btn a {
-    text-decoration: none;
-    list-style-type: none;
-    margin-left: 0.5em;
-}
-
-.prev-btn a:hover {
-    color: #06bb34;
-}
-
-.exerciseDetails li{
-    list-style-type: none
-}
-
-#listExercises{
+#container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin: 1em 1em;
+    padding: 1em 1em;
+    justify-content: center;
+    text-align: center;
 }
 
-.exerciseDetails{
-    border: 3px solid black;
-    display: grid;
-    grid-template-columns: 1fr;
-       /*grid-template-rows: auto;*/
-        grid-column-gap: 1em;
-        grid-row-gap: 1em;
-        margin: 1em 1em;
-        padding: 1em 1em;
-        justify-content: center;
-        text-align: center;
+#container article{
+    border: 3px solid #06bb34;
 }
-
-.exercise-details-minANDage li{
-    padding: 0.3em;
-}
-

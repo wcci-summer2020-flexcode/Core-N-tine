@@ -30,6 +30,9 @@ public class ItemController {
         model.addAttribute("room", itemRepo.findItemByName("Empty Room"));
         model.addAttribute("pvcPipe", itemRepo.findItemByName("PVC Pipe"));
         model.addAttribute("paperPlates", itemRepo.findItemByName("Paper Plates"));
+        model.addAttribute("pillow", itemRepo.findItemByName("Pillow"));
+        model.addAttribute("rope", itemRepo.findItemByName("Rope"));
+        model.addAttribute("backpack", itemRepo.findItemByName("Backpack"));
         return "itemsView";
     }
 

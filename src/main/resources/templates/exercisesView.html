@@ -18,16 +18,17 @@
         <li><a href="/exercises" class="cool-link">BROWSE ALL EXERCISES</a></li>
         <li><a href="/exerciseplan" class="cool-link">EXERCISE PLANS</a></li>
         <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
+        <li><a href="/theTeam.html" class="cool-link">THE TEAM</a></li>
         <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
         <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
     </ul>
 </nav>
 
     <h2 class="exerciseHeader">Simply browse through all of the exercises to find your fit</h2>
-
+<div id="listExercises">
         <section class="exerciseDetails" th:each="exercise:${exercises}">
-            <h3 class="exerciseDetailsName" th:text="${exercise.name}"></h3>
-            <img class="exerciseImage" th:src="${exercise.imageUrl}">
+                <h3 class="exerciseDetailsName" th:text="${exercise.name}"></h3>
+                <img width="400" height="350" class="exerciseImage" th:src="${exercise.imageUrl}">
             <ul class="exercise-details-minANDage">
                 <h4>Minutes Needed:</h4>
                 <li th:text="${exercise.timeInMinutes}"></li>
@@ -35,11 +36,13 @@
                 <li th:text="${exercise.youngAge}"></li>
                 <h4>Max Age:</h4>
                 <li th:text="${exercise.oldAge}"></li>
+                <h4>Muscles:</h4>
+                <li th:each="muscle:${exercise.muscles}"><a th:text="${muscle.name}"></a></li>
             </ul>
             <p class="exerciseDetailsDescription" th:text="${exercise.description}"></p>
-            <iframe width="560" height="315" th:src="${exercise.videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<!--            <iframe width="560" height="315" th:src="${exercise.videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
         </section>
+</div>
 
 <div class="prev-btn">
     <a class="fas fa-chevron-left" href="/items">  back</a>

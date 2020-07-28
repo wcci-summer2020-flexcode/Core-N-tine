@@ -70,3 +70,44 @@ function showPlates(checked){
         text.style.display = "none";
     }
 }
+
+//newly added items
+
+
+function showPillow(checked){
+
+    const checkBox = document.getElementById("pillowBox");
+    const text = document.getElementById("hiddenField6");
+
+    if (checkBox.checked === true) {
+        text.style.display = "block";
+    } else {
+        text.style.display = "none";
+    }
+}
+
+
+function showRope(checked){
+
+    const checkBox = document.getElementById("ropeBox");
+    const text = document.getElementById("hiddenField7");
+
+    if (checkBox.checked === true) {
+        text.style.display = "block";
+    } else {
+        text.style.display = "none";
+    }
+}
+
+
+function showBackpack(checked){
+
+    const checkBox = document.getElementById("backpackBox");
+    const text = document.getElementById("hiddenField8");
+
+    if (checkBox.checked === true) {
+        text.style.display = "block";
+    } else {
+        text.style.display = "none";
+    }
+}

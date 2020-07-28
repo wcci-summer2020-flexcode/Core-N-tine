@@ -18,6 +18,7 @@
         <li><a href="/exercises" class="cool-link">BROWSE ALL EXERCISES</a></li>
         <li><a href="/exerciseplan" class="cool-link">EXERCISE PLANS</a></li>
         <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
+        <li><a href="/theTeam.html" class="cool-link">THE TEAM</a></li>
         <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
         <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
     </ul>
@@ -56,6 +57,21 @@
     <div id="listContainer5">
         <h3 class="itemPaperPlates"><label class="checkboxContainer"><input id="platesBox" type="checkbox" onclick="showPlates()"><span class="checkmark"></span> </label>Paper Plates</h3>
         <img src="images/paperplates.jfif">
+    </div>
+<!--new items-->
+    <div id="listContainer6">
+        <h3 class="itemPillow"><label class="checkboxContainer"><input id="pillowBox" type="checkbox" onclick="showPillow()"><span class="checkmark"></span> </label>Pillow</h3>
+        <img src="images/pillow.jfif">
+    </div>
+
+    <div id="listContainer7">
+        <h3 class="itemRope"><label class="checkboxContainer"><input id="ropeBox" type="checkbox" onclick="showRope()"><span class="checkmark"></span> </label>Rope</h3>
+        <img src="images/rope.jfif">
+    </div>
+
+    <div id="listContainer8">
+        <h3 class="itemBackpack"><label class="checkboxContainer"><input id="backpackBox" type="checkbox" onclick="showBackpack()"><span class="checkmark"></span> </label>Backpack</h3>
+        <img src="images/backpack.jfif">
     </div>
 </div>
 
@@ -102,8 +118,32 @@
     <h3 class="exercise-details-title" th:each="exercise:${paperPlates.exercises}"> <a th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
         <img th:src="${exercise.imageUrl}">
     </h3>
-</div>
+    </div>
 
+<!--new exercises-->
+
+    <div id="hiddenField6" style="display:none">
+    <h2 class="selectItems">Step II - Choose an exercises</h2>
+    <h3 class="exercise-details-title" th:each="exercise:${pillow.exercises}"> <a th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
+        <img th:src="${exercise.imageUrl}">
+    </h3>
+    </div>
+
+
+    <div id="hiddenField7" style="display:none">
+    <h2 class="selectItems">Step II - Choose an exercises</h2>
+    <h3 class="exercise-details-title" th:each="exercise:${rope.exercises}"> <a th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
+        <img th:src="${exercise.imageUrl}">
+    </h3>
+    </div>
+
+
+    <div id="hiddenField8" style="display:none">
+    <h2 class="selectItems">Step II - Choose an exercises</h2>
+    <h3 class="exercise-details-title" th:each="exercise:${backpack.exercises}"> <a th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
+        <img th:src="${exercise.imageUrl}">
+    </h3>
+    </div>
 </div>
 
 <!--BUTTON-->

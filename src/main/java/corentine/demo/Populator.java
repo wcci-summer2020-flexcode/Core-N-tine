@@ -36,6 +36,8 @@ public class Populator implements CommandLineRunner {
         Item paperPlates = new Item("Paper Plates", "/images/paperplates.jfif");
         Item pillow = new Item("Pillow", "/images/pillow.jfif");
         Item pvcPipe = new Item("PVC Pipe", "/images/pvcpipe.jpg");
+        Item rope = new Item("Rope", "/images/rope.jfif");
+        Item backpack = new Item("Backpack", "/images/backpack.jfif");
 
         itemRepo.save(chair);
         itemRepo.save(stairs);
@@ -44,6 +46,8 @@ public class Populator implements CommandLineRunner {
         itemRepo.save(paperPlates);
         itemRepo.save(pillow);
         itemRepo.save(pvcPipe);
+        itemRepo.save(rope);
+        itemRepo.save(backpack);
 
         Muscle triceps = new Muscle("Triceps");
         Muscle biceps = new Muscle("Biceps");
@@ -220,6 +224,47 @@ public class Populator implements CommandLineRunner {
         overheadSquatMuscles.add(back);
         ArrayList<Muscle> restMuscles = new ArrayList<>();
         restMuscles.add(abs);
+        ArrayList<Muscle> invertedRowMuscles = new ArrayList<>();
+        invertedRowMuscles.add(biceps);
+        invertedRowMuscles.add(back);
+        ArrayList<Muscle> trxPushUpsMuscles = new ArrayList<>();
+        trxPushUpsMuscles.add(chest);
+        ArrayList<Muscle> tricepsExtensionMuscles = new ArrayList<>();
+        tricepsExtensionMuscles.add(back);
+        tricepsExtensionMuscles.add(chest);
+        ArrayList<Muscle> highCurlMuscles = new ArrayList<>();
+        highCurlMuscles.add(biceps);
+        ArrayList<Muscle> kneeDriveMuscles = new ArrayList<>();
+        kneeDriveMuscles.add(quads);
+        kneeDriveMuscles.add(glutes);
+        ArrayList<Muscle> hamstringPullInMuscles = new ArrayList<>();
+        hamstringPullInMuscles.add(glutes);
+//        hamstringPullInMuscles.add(glutes); was this supposed to be a diff muscle?
+        ArrayList<Muscle> bearCrawlMuscles = new ArrayList<>();
+        bearCrawlMuscles.add(quads);
+        bearCrawlMuscles.add(abs);
+        bearCrawlMuscles.add(chest);
+        ArrayList<Muscle> squatPressMuscles = new ArrayList<>();
+        squatPressMuscles.add(glutes);
+        squatPressMuscles.add(quads);
+        squatPressMuscles.add(abs);
+        squatPressMuscles.add(back);
+        ArrayList<Muscle> deadLiftRowMuscles = new ArrayList<>();
+        deadLiftRowMuscles.add(glutes);
+        deadLiftRowMuscles.add(abs);
+        deadLiftRowMuscles.add(back);
+        ArrayList<Muscle> plankPassThroughMuscles = new ArrayList<>();
+        plankPassThroughMuscles.add(back);
+        plankPassThroughMuscles.add(biceps);
+        plankPassThroughMuscles.add(triceps);
+        plankPassThroughMuscles.add(glutes);
+        ArrayList<Muscle> lateralLungeAndCurlMuscles = new ArrayList<>();
+        lateralLungeAndCurlMuscles.add(quads);
+        lateralLungeAndCurlMuscles.add(glutes);
+        lateralLungeAndCurlMuscles.add(abs);
+        lateralLungeAndCurlMuscles.add(biceps);
+        ArrayList<Muscle> obliqueTwistsMuscles = new ArrayList<>();
+        obliqueTwistsMuscles.add(abs);
 
         Exercise tricepsChairDip = new Exercise("Triceps Chair Dip", "/images/tricepsChairDip.gif","https://www.youtube.com/embed/3ydgLFLK8e0" ,"Put your hands on the edge of the seat of the chair. While in a sitting position hold yourself up in front of the chair. Slowly bend your elbows as much as you can, then return to the starting position. Repeat this motion up to 20 times.", 5, 3, 80, tricepsChairDipMuscles, chair);
         Exercise chairPlank = new Exercise("Chair Plank", "/images/chairPlank.gif","https://www.youtube.com/embed/GMqoX8bDfDU" ,"Place your forearms in the seat of the chair and lock your fingers together. Stretch your body away from the chair hold yourself up on your toes. Be sure to keep your back straight. Hold this position up to 60 seconds.", 2, 5, 80, chairPlankMuscles, chair);
@@ -254,7 +299,8 @@ public class Populator implements CommandLineRunner {
         Exercise slidingTricepsPushup = new Exercise("Sliding Triceps Pushup", "/images/slidingtricepspushup.jpg", "https://www.youtube.com/embed/FHnE8As1cSg", "Begin at the top of a modified pushup position with your hands on the plates, shoulder-width apart. Bend your left elbow and lower into a pushup (keeping your arm close to your body) as you slide your right arm straight out on the floor. Press back up, sliding your right arm in. That's one rep. Do 15 reps total, alternating arms each time.", 5, 10, 70, slidingTricepsPushUpMuscles, paperPlates);
         Exercise slidingSitUp = new Exercise("Sliding Sit Up", "/images/slidingsitup.jpg", "https://www.youtube.com/embed/pJZf9yfGIMk", "Lie on your back with your legs extended and together. Place your arms out to each side in a 'T' shape, with the plates under your palms. Keeping your arms straight and elbows soft, press down and slide your arms in by your sides as you sit up and bend your knees. Slide back out and return to your start position. That's one rep. Do 15 reps total.", 3, 10, 70, slidingSitUpMuscles, paperPlates);
         Exercise heelCurlCrunch = new Exercise("Heel Curl Crunch", "/images/heelcurlcrunch.jpg", "https://www.youtube.com/embed/bHNgRvTk5PA", "Sit with your hands behind your head, spine straight. Bend your knees and flex your feet so that just your heels are pressed into the plates. Slide your legs out straight as you hinge back, lowering all the way down to the floor with your body, sliding your legs out into a wide 'V' position. Bend your knees and use your abs to return to your starting position, sliding your heels into your body as you sit up. That's one rep. Do 15 reps total.", 5, 12, 70, heelCurlCrunchMuscles, paperPlates);
-        Exercise legDarts = new Exercise("Leg Darts", "/images/legdart.jpg", "https://www.youtube.com/embed/GeWKYPqV3A8", "Lie on your stomach with your legs together. Arms along your sides. Lift your abdominal muscles away from the mat. Inhale. Exhale. Keep your abdominal muscles pulled in. Extend energy through your spine and out the top of your head to lift your upper body slightly off the mat. Anchor your pubic bone to the mat to protect your lower back. Your legs and glutes are engaged as part of the stability of the lower body but don't over-squeeze them. Your head is an extension of your spine. Your gaze will be down. Your shoulder blades will slide down your back as your arms reach behind you like they are being blown back. Hold for an inhale. Exhale to lengthen and lower your body to the floor. Repeat this exercise three times.", 5, 8, 70, legDartsMuscles, pillow);
+//        Exercise legDarts = new Exercise("Leg Darts", "/images/legdart.jpg", "https://www.youtube.com/embed/GeWKYPqV3A8", "Lie on your stomach with your legs together. Arms along your sides. Lift your abdominal muscles away from the mat. Inhale. Exhale. Keep your abdominal muscles pulled in. Extend energy through your spine and out the top of your head to lift your upper body slightly off the mat. Anchor your pubic bone to the mat to protect your lower back. Your legs and glutes are engaged as part of the stability of the lower body but don't over-squeeze them. Your head is an extension of your spine. Your gaze will be down. Your shoulder blades will slide down your back as your arms reach behind you like they are being blown back. Hold for an inhale. Exhale to lengthen and lower your body to the floor. Repeat this exercise three times.", 5, 8, 70, legDartsMuscles, pillow);
+        Exercise legDarts = new Exercise("Leg Darts", "/images/legdart.jfif", "https://www.youtube.com/embed/GeWKYPqV3A8", "Lie on your stomach with your legs together. Arms along your sides. Lift your abdominal muscles away from the mat. Inhale. Exhale. Keep your abdominal muscles pulled in. Extend energy through your spine and out the top of your head to lift your upper body slightly off the mat. Anchor your pubic bone to the mat to protect your lower back. Your legs and glutes are engaged as part of the stability of the lower body but don't over-squeeze them. Your head is an extension of your spine. Your gaze will be down. Your shoulder blades will slide down your back as your arms reach behind you like they are being blown back. Hold for an inhale. Exhale to lengthen and lower your body to the floor. Repeat this exercise three times.", 5, 8, 70, legDartsMuscles, pillow);
         Exercise halfRollLegLifts = new Exercise("Half Roll Back Leg Lifts", "/images/halfleglifts.jfif", "https://www.youtube.com/embed/UU1c3vX-PMs", "Start on all fours with the hands under the shoulders and the knees under the hips. Extend one leg behind you. Lift the leg to hip level and then slowly lower it back down. Repeat with the opposite leg until set is complete.", 5, 10, 70, halfRollLegLiftsMuscles, pillow);
         Exercise pillowTwist = new Exercise("Pillow Twist", "/images/pillowtwist.jfif", "https://www.youtube.com/embed/rCgGlW8I5MI", "Lay flat on your back with the pillow above your chest and your arms and abs engaged. Pull your knees in toward you and lift up your chest using the power from your abdominals and your hip flexors. Maintain a strong boat position as you twist from the belly to face the left side, then the right.", 5, 10, 80, pillowTwistMuscles, pillow);
         Exercise extendLegs = new Exercise("Extend Legs", "/images/extendlegs.jfif", "https://www.youtube.com/embed/HKDFDsGBk5k", "Place a pillow between your knees and squeeze thigh muscles. Squat down by bending from your hips and pushing your buttocks backwards. Keep your back flat and squeeze the pillow with your knees. Keep your thigh muscles tight throughout the movement.", 5, 8, 80, extendLegsMuscles, pillow);
@@ -266,7 +312,20 @@ public class Populator implements CommandLineRunner {
         Exercise pipeLean = new Exercise("PVC Pipe Lean", "/images/pipelean.jfif", "https://www.youtube.com/embed/QDGYYeHPd7E", "Hold the PVC pipe vertically along spine so that it's touching the back of head, between shoulder blades, and tailbone. Keeping pipe in contact with each touch point, hinge at the hips so that upper body is leaning forward. Keep knees straight but not locked. Continue bending until you feel tension at back of legs or just before the pipe detaches from one of the points of contact. Slowly lift chest to return to start.", 10,  10, 65, pipeLeanMuscles, pvcPipe);
         Exercise frontSquat = new Exercise("PVC Pipe Front Squat", "/images/pvcfrontsquat.jfif", "https://www.youtube.com/embed/_5DJOO6OGSs", "Hold the PVC pipe in front rack position so that the pipe rests horizontally across the chest, with fingers and thumbs loosely wrapped around the pipe, fingers pointing backward toward shoulders. Rotate elbows until they are parallel to the floor (or as close to that as possible) to start. Do an air squat while keeping elbows high. Keeping chest up, continue squatting until hips go below parallel or form is compromised, whichever comes first. Then, keeping weight in heels, stand to return to start.", 5, 12, 70, frontSquatMuscles, pvcPipe);
         Exercise overheadSquat = new Exercise("PVC Overhead Squat", "/images/overheadsquat.jfif", "https://www.youtube.com/embed/TjIBLuaVw3M", "Stand with feet slightly wider than hip-width apart. Hold the PVC pipe with a wide grip, then lock arms out overhead. Squeeze glutes, engage your core, and tuck your ribs under to start. Initiate the squat by sending hips back and bending knees. Slowly descend, maintaining tightness in the upper back, and without letting the pipe go too far in front or behind the center line. Push up on the PVC pipe as if trying to touch the ceiling. Keeping chest tall, continue squatting until you break parallel or your form is compromised, whichever comes first. Then, press through the midfoot to stand.", 10, 12, 60, overheadSquatMuscles, pvcPipe);
-        Exercise rest = new Exercise("Rest", "", "", "Take a day of rest. You deserve it!", 0, 0, 0, restMuscles, room);
+//        Exercise rest = new Exercise("Rest", "rest.jpg", "", "Take a day of rest. You deserve it!", 0, 0, 0, restMuscles, room);
+        Exercise rest = new Exercise("Rest", "/images/rest.jpg", "", "Take a day of rest. You deserve it!", 0, 0, 0, restMuscles, room);
+        Exercise trxPushUps = new Exercise("TRX Push Ups", "/images/trxPushups.jpg", "https://www.youtube.com/embed/b4fUS7yITAw", "Stand facing away from the TRX with feet shoulder-width apart. Hold handles at chest height in front of you, arms extended and palms facing the floor. With body aligned from head to heels, shift weight to balls of feet and bend elbows. Push up to return to starting position.", 10, 16, 60, trxPushUpsMuscles, rope);
+        Exercise invertedRow = new Exercise("Inverted Row", "/images/invertedRow.jpg", "https://www.youtube.com/embed/2RXhfWZvG6s", "Lie faceup under the TRX with knees bent and feet on floor. Hold the handles over your chest, arms extended and palms facing each other. Bend elbows, pulling torso up until your body is aligned from shoulders to knees. Extend arms to starting position.", 10, 16, 60, invertedRowMuscles, rope);
+        Exercise tricepsExtension = new Exercise("Triceps Extension", "/images/tricepsExtension.jpg", "https://www.youtube.com/embed/VKqhVPiLh00", "Stand facing away from the TRX with feet hip-width apart. Lean forward and grasp handles in front of your face, elbows bent 90 degrees and palms facing away from you. Extend your arms, then bend elbows to return to starting position.", 10, 16, 60, tricepsExtensionMuscles, rope);
+        Exercise highCurl = new Exercise("High Curl", "/images/highCurl.jpg", "https://www.youtube.com/embed/xG57S0fgXAk", "Stand facing away from the TRX with feet hip-width apart. Lean forward and grasp handles in front of your face, elbows bent 90 degrees and palms facing away from you. Extend your arms, then bend elbows to return to starting position.", 10, 16, 60, highCurlMuscles, rope);
+        Exercise kneeDrive = new Exercise("Knee Drive", "/images/kneeDrive.jpg", "https://www.youtube.com/embed/IoM1QxqGSBg", "Stand facing the TRX and hold handles high in front of you, palms facing each other. Bend left knee 90 degrees, shifting weight to right leg. Bend right knee. Rise up onto ball of right foot as you lift left knee to hip height in front of you and bend elbows, pulling handles toward chest. Return to starting position. Switch sides to complete set.", 10, 16, 60, kneeDriveMuscles, rope);
+        Exercise hamstringPullIn = new Exercise("Hamstring Pull-In", "/images/hamstringPullIn.jpg", "https://www.youtube.com/embed/ks5Bb3JQhoM", "Lie faceup with your heels in the TRX's foot cradles, legs extended and arms straight out to sides in a \"T,\" palms on floor. Lift hips so body is aligned from shoulders to heels. Bend knees, pulling handles toward you. Extend legs to starting position.", 10, 16, 60, hamstringPullInMuscles, rope);
+        Exercise bearCrawl = new Exercise("Bear Crawl", "/images/bearCrawl.png  ", "https://www.youtube.com/embed/jsv9WBxRz5Q", "Rise up onto ball of right foot as you lift left knee to hip height in front of you and bend elbows, pulling handles toward chest. Return to starting position. Switch sides to complete set.", 10, 10, 60, bearCrawlMuscles, backpack);
+        Exercise squatPress = new Exercise("Squat Press", "/images/squatPress.jpg", "https://www.youtube.com/embed/630qCquVzQI", "Hold your backpack straps at your shoulders with the pack positioned behind you. Press your hips backward and squat down as far as you can, keeping your weight in your heels, your knees aligned with your toes. When your thighs are at or below parallel to the floor, press through your heels to return to standing. As you stand, press your arms straight up over your head, lifting your pack upward. Lower the pack back to the starting position. Continue for 60 seconds.", 10, 10, 60, squatPressMuscles, backpack);
+        Exercise deadliftRow = new Exercise("Deadlift Row", "/images/deadliftRow.jpg", "https://www.youtube.com/embed/KbQND-1Vdro", "Hold both backpack straps in both hands at your thighs, your arms extended, so the pack is parallel to the ground. Stand with your feet hip-distance apart, knees slightly bent. Press your hips backward and hinge forward in a deadlift, keeping your back straight and your core engaged, so your glutes and hamstrings control the movement. When your back is roughly parallel to the ground, bend your elbows and row the pack up to your torso, squeezing your shoulder blades together. Lower the pack, then squeeze your hamstrings and glutes to pull yourself back to standing. Continue for 60 seconds.", 10, 10, 60, deadLiftRowMuscles, backpack);
+        Exercise plankPassThrough = new Exercise("Plank Pass Through", "/images/plankPassThrough.jpg", "https://www.youtube.com/embed/PKKsCnT6EsE", "Place your backpack beside you. ... Start with the backpack on right side of body. With left hand, reach under your chest and grab ahold of the backpack. Place the backpack beside your left side and resume plank position. Now perform same movement on opposing side.", 10, 10, 60, plankPassThroughMuscles, backpack);
+        Exercise lateralLungeAndCurl = new Exercise("Lateral Lunge And Curl", "/images/lateralLungeAndCurl.jpg", "https://www.youtube.com/embed/8d0DoxfC4Qw", "Stand tall, your feet roughly hip-distance apart, your knees slightly bent. Hold one backpack strap in each hand, your arms extended downward at your sides, your palms facing forward with the pack perpendicular to the ground. Take a wide step laterally with your right leg, angling your toe slightly outward with your weight in your heel. Press your hips backward and bend your right knee, keeping your left leg straight, lunging to the right. As you lunge, curl your palms up to your shoulders, lifting your backpack (keep your upper arms close to your sides). Reverse the movement, lowering the backpack and pressing through your right heel and step back to the starting position. Lunge to the right for 60 seconds, then lunge to the left for 60 seconds.", 10, 10, 60, lateralLungeAndCurlMuscles, backpack);
+        Exercise obliqueTwists = new Exercise("Oblique Twists", "/images/obliqueTwist.jpg", "https://www.youtube.com/embed/pDTHSnoGoEc", "Sit on the ground, your knees bent, your heels lightly touching the floor. Hold your pack between your hands at your waist. Keeping your torso straight, lean back until you feel your abs engage. From this position, twist your torso to the right, tapping the pack on the ground outside your right hip, then reverse the movement, twisting all the way to the left side. Continue for 60 seconds.", 10, 10, 60, obliqueTwistsMuscles, backpack);
 
         exerciseRepo.save(tricepsChairDip);
         exerciseRepo.save(chairPlank);
@@ -314,6 +373,18 @@ public class Populator implements CommandLineRunner {
         exerciseRepo.save(frontSquat);
         exerciseRepo.save(overheadSquat);
         exerciseRepo.save(rest);
+        exerciseRepo.save(trxPushUps);
+        exerciseRepo.save(invertedRow);
+        exerciseRepo.save(tricepsExtension);
+        exerciseRepo.save(highCurl);
+        exerciseRepo.save(kneeDrive);
+        exerciseRepo.save(hamstringPullIn);
+        exerciseRepo.save(bearCrawl);
+        exerciseRepo.save(squatPress);
+        exerciseRepo.save(deadliftRow);
+        exerciseRepo.save(plankPassThrough);
+        exerciseRepo.save(lateralLungeAndCurl);
+        exerciseRepo.save(obliqueTwists);
 
         ArrayList<Exercise> beginnerDayOne = new ArrayList<>();
         beginnerDayOne.add(tricepsChairDip);
@@ -338,6 +409,5 @@ public class Populator implements CommandLineRunner {
         ExercisePlan beginner = new ExercisePlan("Test 1", 3, beginnerDayOne, beginnerDayTwo, beginnerDayThree, beginnerDayFour, beginnerDayFive);
 
         exercisePlanRepo.save(beginner);
-
     }
 }

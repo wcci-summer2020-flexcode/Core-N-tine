@@ -46,11 +46,20 @@ public class ExercisePlanController {
     }
 
     @PostMapping("/buildaplan/add-plan")
-    public String buildAPlan(@RequestParam String planName, @RequestParam int amountOfDays, @RequestParam String exerciseName1){
-        Exercise dayOneExercise = exerciseRepo.findExerciseByName(exerciseName1);
+    public String buildAPlan(@RequestParam String planName, @RequestParam int amountOfDays, @RequestParam String exerciseName1, @RequestParam String exerciseName2, @RequestParam String exerciseName3, @RequestParam String exerciseName4, @RequestParam String dayTwoExerciseName1){
+        Exercise dayOneExercise1 = exerciseRepo.findExerciseByName(exerciseName1);
+        Exercise dayOneExercise2 = exerciseRepo.findExerciseByName(exerciseName2);
+        Exercise dayOneExercise3 = exerciseRepo.findExerciseByName(exerciseName3);
+        Exercise dayOneExercise4 = exerciseRepo.findExerciseByName(exerciseName4);
+        Exercise dayTwoExercise1 = exerciseRepo.findExerciseByName(dayTwoExerciseName1);
         ArrayList<Exercise> dayOneExercises = new ArrayList<>();
-        dayOneExercises.add(dayOneExercise);
-        ExercisePlan planToAdd = new ExercisePlan(planName, amountOfDays, dayOneExercises);
+        dayOneExercises.add(dayOneExercise1);
+        dayOneExercises.add(dayOneExercise2);
+        dayOneExercises.add(dayOneExercise3);
+        dayOneExercises.add(dayOneExercise4);
+        ArrayList<Exercise> dayTwoExercises = new ArrayList<>();
+        dayTwoExercises.add(dayTwoExercise1);
+        ExercisePlan planToAdd = new ExercisePlan(planName, amountOfDays, dayOneExercises, dayTwoExercises);
         exercisePlanRepo.save(planToAdd);
         return "redirect:/exerciseplan";
     }

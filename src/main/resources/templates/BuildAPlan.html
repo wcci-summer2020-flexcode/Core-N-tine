@@ -31,8 +31,21 @@
     <input name="amountOfDays" type="number">Number Of Days<br>
     <select id="exerciseName1" name="exerciseName1" multiple size="4">
     <option th:each="exercise:${exercises}" th:text="${exercise.name}">
-        <input name="exerciseId" type="hidden" th:value="${exercise.id}">
+        <input name="exerciseId" type="hidden" th:value="${exercise.id}"></option></select>
+        <select id="exerciseName2" name="exerciseName2" multiple size="4">
+        <option th:each="exercise:${exercises}" th:text="${exercise.name}">
+            <input name="exerciseId" type="hidden" th:value="${exercise.id}"></option></select>
+        <select id="exerciseName3" name="exerciseName3" multiple size="4">
+        <option th:each="exercise:${exercises}" th:text="${exercise.name}">
+            <input name="exerciseId" type="hidden" th:value="${exercise.id}"></option></select>
+        <select id="exerciseName4" name="exerciseName4" multiple size="4">
+        <option th:each="exercise:${exercises}" th:text="${exercise.name}">
+            <input name="exerciseId" type="hidden" th:value="${exercise.id}">
     </option></select>
+    <select id="dayTwoExerciseName1" name="dayTwoExerciseName1" multiple size="4">
+        <option th:each="exercise:${exercises}" th:text="${exercise.name}">
+            <input name="exerciseId" type="hidden" th:value="${exercise.id}">
+        </option></select>
     <button type="submit">Submit</button>
 </form>
 </div>

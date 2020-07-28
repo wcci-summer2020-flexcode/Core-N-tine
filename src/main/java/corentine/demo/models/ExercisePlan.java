@@ -56,6 +56,13 @@ public class ExercisePlan {
 
     public ExercisePlan(){}
 
+    public ExercisePlan(String planName, int amountOfDays, Collection<Exercise> dayOneExercises, Collection<Exercise> dayTwoExercises){
+        this.planName = planName;
+        this.amountOfDays = amountOfDays;
+        this.dayOneExercises = dayOneExercises;
+        this.dayTwoExercises = dayTwoExercises;
+    }
+
     public ExercisePlan(String planName, int amountOfDays, Collection<Exercise> dayOneExercises, Collection<Exercise> dayTwoExercises, Collection<Exercise> dayThreeExercises, Collection<Exercise> dayFourExercises, Collection<Exercise> dayFiveExercises){
         this.planName = planName;
         this.amountOfDays = amountOfDays;

@@ -46,12 +46,39 @@ public class ExercisePlanController {
     }
 
     @PostMapping("/buildaplan/add-plan")
-    public String buildAPlan(@RequestParam String planName, @RequestParam int amountOfDays, @RequestParam String exerciseName1, @RequestParam String exerciseName2, @RequestParam String exerciseName3, @RequestParam String exerciseName4, @RequestParam String dayTwoExerciseName1){
+    public String buildAPlan(@RequestParam String planName, @RequestParam int amountOfDays,
+                             @RequestParam String exerciseName1, @RequestParam String exerciseName2,
+                             @RequestParam String exerciseName3, @RequestParam String exerciseName4,
+                             @RequestParam String dayTwoExerciseName1, @RequestParam String dayTwoExerciseName2,
+                             @RequestParam String dayTwoExerciseName3, @RequestParam String dayTwoExerciseName4,
+                             @RequestParam String dayThreeExerciseName1, @RequestParam String dayThreeExerciseName2,
+                             @RequestParam String dayThreeExerciseName3, @RequestParam String dayThreeExerciseName4,
+                             @RequestParam String dayFourExerciseName1, @RequestParam String dayFourExerciseName2,
+                             @RequestParam String dayFourExerciseName3, @RequestParam String dayFourExerciseName4,
+                             @RequestParam String dayFiveExerciseName1, @RequestParam String dayFiveExerciseName2,
+                             @RequestParam String dayFiveExerciseName3, @RequestParam String dayFiveExerciseName4){
+
         Exercise dayOneExercise1 = exerciseRepo.findExerciseByName(exerciseName1);
         Exercise dayOneExercise2 = exerciseRepo.findExerciseByName(exerciseName2);
         Exercise dayOneExercise3 = exerciseRepo.findExerciseByName(exerciseName3);
         Exercise dayOneExercise4 = exerciseRepo.findExerciseByName(exerciseName4);
         Exercise dayTwoExercise1 = exerciseRepo.findExerciseByName(dayTwoExerciseName1);
+        Exercise dayTwoExercise2 = exerciseRepo.findExerciseByName(dayTwoExerciseName2);
+        Exercise dayTwoExercise3 = exerciseRepo.findExerciseByName(dayTwoExerciseName3);
+        Exercise dayTwoExercise4 = exerciseRepo.findExerciseByName(dayTwoExerciseName4);
+        Exercise dayThreeExercise1 = exerciseRepo.findExerciseByName(dayThreeExerciseName1);
+        Exercise dayThreeExercise2 = exerciseRepo.findExerciseByName(dayThreeExerciseName2);
+        Exercise dayThreeExercise3 = exerciseRepo.findExerciseByName(dayThreeExerciseName3);
+        Exercise dayThreeExercise4 = exerciseRepo.findExerciseByName(dayThreeExerciseName4);
+        Exercise dayFourExercise1 = exerciseRepo.findExerciseByName(dayFourExerciseName1);
+        Exercise dayFourExercise2 = exerciseRepo.findExerciseByName(dayFourExerciseName2);
+        Exercise dayFourExercise3 = exerciseRepo.findExerciseByName(dayFourExerciseName3);
+        Exercise dayFourExercise4 = exerciseRepo.findExerciseByName(dayFourExerciseName4);
+        Exercise dayFiveExercise1 = exerciseRepo.findExerciseByName(dayFiveExerciseName1);
+        Exercise dayFiveExercise2 = exerciseRepo.findExerciseByName(dayFiveExerciseName2);
+        Exercise dayFiveExercise3 = exerciseRepo.findExerciseByName(dayFiveExerciseName3);
+        Exercise dayFiveExercise4 = exerciseRepo.findExerciseByName(dayFiveExerciseName4);
+
         ArrayList<Exercise> dayOneExercises = new ArrayList<>();
         dayOneExercises.add(dayOneExercise1);
         dayOneExercises.add(dayOneExercise2);
@@ -59,7 +86,26 @@ public class ExercisePlanController {
         dayOneExercises.add(dayOneExercise4);
         ArrayList<Exercise> dayTwoExercises = new ArrayList<>();
         dayTwoExercises.add(dayTwoExercise1);
-        ExercisePlan planToAdd = new ExercisePlan(planName, amountOfDays, dayOneExercises, dayTwoExercises);
+        dayTwoExercises.add(dayTwoExercise2);
+        dayTwoExercises.add(dayTwoExercise3);
+        dayTwoExercises.add(dayTwoExercise4);
+        ArrayList<Exercise> dayThreeExercises = new ArrayList<>();
+        dayThreeExercises.add(dayThreeExercise1);
+        dayThreeExercises.add(dayThreeExercise2);
+        dayThreeExercises.add(dayThreeExercise3);
+        dayThreeExercises.add(dayThreeExercise4);
+        ArrayList<Exercise> dayFourExercises = new ArrayList<>();
+        dayFourExercises.add(dayFourExercise1);
+        dayFourExercises.add(dayFourExercise2);
+        dayFourExercises.add(dayFourExercise3);
+        dayFourExercises.add(dayFourExercise4);
+        ArrayList<Exercise> dayFiveExercises = new ArrayList<>();
+        dayFiveExercises.add(dayFiveExercise1);
+        dayFiveExercises.add(dayFiveExercise2);
+        dayFiveExercises.add(dayFiveExercise3);
+        dayFiveExercises.add(dayFiveExercise4);
+
+        ExercisePlan planToAdd = new ExercisePlan(planName, amountOfDays, dayOneExercises, dayTwoExercises, dayThreeExercises, dayFourExercises, dayFiveExercises);
         exercisePlanRepo.save(planToAdd);
         return "redirect:/exerciseplan";
     }

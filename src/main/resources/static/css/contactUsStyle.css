@@ -40,6 +40,7 @@ h1{
     font-weight: bolder;
     font-size: 18px;
     padding: 1px 20px;
+    color: #0a0a0a;
 }
 
 .cool-link::after{
@@ -93,4 +94,40 @@ footer{
     left: 0;
     right: 0;
     text-align: center;
+}
+
+.goToTopBtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
+    right: 50px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: #06bb34;
+    font-size: 35px;
+    border: 3px solid #06bb34;
+}
+
+.arrowLeft{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    /*bottom: 50px;*/
+    /*right: 20px;*/
+    /*left: 120px;*/
+    top: 20%;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: #06bb34;
+    font-size: 35px;
+    /*border: 3px solid #06bb34;*/
+}
+
+.arrowLeft:hover{
+    font-size: 40px;
 }

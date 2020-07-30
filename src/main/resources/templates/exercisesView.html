@@ -7,6 +7,7 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <link rel="stylesheet" href="/css/exercisesView.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
     <title>All Exercises</title>
 </head>
 
@@ -18,6 +19,7 @@
         <li><a href="/exercises" class="cool-link">BROWSE ALL EXERCISES</a></li>
         <li><a href="/exerciseplan" class="cool-link">EXERCISE PLANS</a></li>
         <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
+        <li><a href="/buildaplan" class="cool-link">ADD A PLAN</a> </li>
         <li><a href="/theTeam.html" class="cool-link">THE TEAM</a></li>
         <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
         <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
@@ -28,7 +30,7 @@
 <div id="listExercises">
         <section class="exerciseDetails" th:each="exercise:${exercises}">
                 <h3 class="exerciseDetailsName" th:text="${exercise.name}"></h3>
-                <img width="400" height="350" class="exerciseImage" th:src="${exercise.imageUrl}">
+                <img width="400" height="400" class="exerciseImage" th:src="${exercise.imageUrl}">
             <ul class="exercise-details-minANDage">
                 <h4>Minutes Needed:</h4>
                 <li th:text="${exercise.timeInMinutes}"></li>
@@ -44,9 +46,14 @@
         </section>
 </div>
 
-<div class="prev-btn">
-    <a class="fas fa-chevron-left" href="/items">  back</a>
-</div>
+<a href="" class="goToTopBtn"><i class="fas fa-chevron-up"></i></a>
+
+<a onclick="goBack()" class="arrowLeft"><i class="fas fa-chevron-left"></i></a>
+<script>
+    function goBack(){
+        window.history.back();
+    }
+</script>
 
 <footer>
     &copy; Team Core-N-Tine 2020

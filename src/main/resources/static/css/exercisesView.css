@@ -5,11 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #0a0a0a;
+    /*color: #0a0a0a;*/
 }
 
 html{
     font-family: "Lato", Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -51,6 +52,7 @@ h4{
     font-weight: bolder;
     font-size: 18px;
     padding: 1px 20px;
+    color: #0a0a0a;
 }
 
 .cool-link::after{
@@ -100,6 +102,7 @@ footer{
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
+    /*background-color: yellow;*/
 }
 
 .exercise-details-minANDage{
@@ -108,38 +111,41 @@ footer{
     letter-spacing: 1px;
 }
 
-.exerciseDetails img{
-    border: 3px solid #ffff;
-}
+/*.exerciseDetails img{*/
+/*    border: 3px solid #ffff;*/
+/*    justify-content: center;*/
+/*    justify-items: center;*/
+
+/*}*/
 
 .exerciseDetailsName{
     padding: 0.5em 1em;
 }
 
-.prev-btn{
-    padding: 10px;
-    position: absolute;
-    top: 25%;
-    transform: translateY(-50%);
-    font-size: 35px;
-    /*z-index: 100;*/
-    cursor: pointer;
-    transition: 400ms;
-}
+/*.prev-btn{*/
+/*    padding: 10px;*/
+/*    position: absolute;*/
+/*    top: 25%;*/
+/*    transform: translateY(-50%);*/
+/*    font-size: 35px;*/
+/*    !*z-index: 100;*!*/
+/*    cursor: pointer;*/
+/*    transition: 400ms;*/
+/*}*/
 
-.prev-btn:hover{
-    font-size: 40px;
-}
+/*.prev-btn:hover{*/
+/*    font-size: 40px;*/
+/*}*/
 
-.prev-btn a {
-    text-decoration: none;
-    list-style-type: none;
-    margin-left: 0.5em;
-}
+/*.prev-btn a {*/
+/*    text-decoration: none;*/
+/*    list-style-type: none;*/
+/*    margin-left: 0.5em;*/
+/*}*/
 
-.prev-btn a:hover {
-    color: #06bb34;
-}
+/*.prev-btn a:hover {*/
+/*    color: #06bb34;*/
+/*}*/
 
 .exerciseDetails li{
     list-style-type: none
@@ -150,11 +156,19 @@ footer{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+#listExercises section img{
+    width: 100%;
+    border: 3px solid #ffff;
+    justify-content: center;
+    justify-items: center;
+}
+
+
 .exerciseDetails{
     border: 3px solid black;
     display: grid;
     grid-template-columns: 1fr;
-       /*grid-template-rows: auto;*/
+       grid-template-rows: auto;
         grid-column-gap: 1em;
         grid-row-gap: 1em;
         margin: 1em 1em;
@@ -167,3 +181,38 @@ footer{
     padding: 0.3em;
 }
 
+.goToTopBtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
+    right: 50px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: #06bb34;
+    font-size: 35px;
+    border: 3px solid #06bb34;
+}
+
+.arrowLeft{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    /*bottom: 50px;*/
+    /*right: 20px;*/
+    /*left: 120px;*/
+    top: 20%;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: #06bb34;
+    font-size: 35px;
+    /*border: 3px solid #06bb34;*/
+}
+
+.arrowLeft:hover{
+    font-size: 40px;
+}

@@ -108,7 +108,8 @@ h3 a{
 }
 
 .exerciseDetailsName {
-    padding: 0.2em 0.2em;
+    padding: 0.5em 0.2em;
+    font-size: 22px;
 }
 
 .exercisePlanDetailsListExercises{

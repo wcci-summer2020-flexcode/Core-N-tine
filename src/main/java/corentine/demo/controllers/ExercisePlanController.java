@@ -5,6 +5,7 @@ import corentine.demo.models.ExercisePlan;
 import corentine.demo.repository.ExercisePlanRepository;
 import corentine.demo.repository.ExerciseRepository;
 import corentine.demo.repository.ItemRepository;
+import corentine.demo.repository.MuscleRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,6 +27,8 @@ public class ExercisePlanController {
     private ExerciseRepository exerciseRepo;
     @Resource
     private ItemRepository itemRepo;
+    @Resource
+    private MuscleRepository muscleRepo;
 
     @RequestMapping({"/exerciseplan"})
     public String displayAllExercisePlans(Model model){
@@ -42,7 +45,7 @@ public class ExercisePlanController {
     }
 
     @RequestMapping("/buildaplan")
-    public String displayBuildPlan(Model model){
+    public String displayBuildPlan(String name, Model model){
         model.addAttribute("exercisePlans", exercisePlanRepo.findAll());
         model.addAttribute("exercises", exerciseRepo.findAll());
         model.addAttribute("chair", itemRepo.findItemByName("Chair"));
@@ -54,6 +57,8 @@ public class ExercisePlanController {
         model.addAttribute("pillow", itemRepo.findItemByName("Pillow"));
         model.addAttribute("rope", itemRepo.findItemByName("Rope"));
         model.addAttribute("backpack", itemRepo.findItemByName("Backpack"));
+        model.addAttribute("muscle", muscleRepo.findMuscleByName(name));
+        model.addAttribute("muscles", muscleRepo.findAll());
         return "BuildAPlan";
     }
 

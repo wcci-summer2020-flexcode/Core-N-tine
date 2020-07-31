@@ -93,6 +93,11 @@ footer{
     font-size: 35px;
 }
 
+.listMusclesDiv{
+    border: 3px dashed #ffff;
+    margin: 5em 10em;
+}
+
 .listOfMusclesThEach{
     font-size: 25px;
     padding: 1em 1em;
@@ -102,6 +107,19 @@ footer{
     text-decoration: none;
     color: #0a0a0a;
 
+}
+
+.listOfMusclesThEach::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #06bb34;
+    transition: width .3s;
+}
+.listOfMusclesThEach:hover::after{
+    width: 100%;
+    transition: width .6s;
 }
 
 .goToTopBtn{

@@ -31,7 +31,8 @@
 <section class="exercisePlanDetails">
 
     <ul class="exercisePlansDetailsList" th:each="exercisePlan:${exercisePlans}">
-        <a th:href="@{'/exerciseplan/' + ${exercisePlan.id}}" th:text="${exercisePlan.planName}"></a></ul>
+        <a class="planListLinkExercise" th:href="@{'/exerciseplan/' + ${exercisePlan.id}}" th:text="${exercisePlan.planName}"></a>
+    </ul>
 
 </section>
 

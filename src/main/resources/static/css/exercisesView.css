@@ -177,6 +177,11 @@ footer{
         text-align: center;
 }
 
+.exerciseDetails img{
+    max-width: 400px;
+    margin: auto auto;
+}
+
 .exercise-details-minANDage li{
     padding: 0.3em;
 }
@@ -215,4 +220,9 @@ footer{
 
 .arrowLeft:hover{
     font-size: 40px;
+}
+
+.exerciseDetailsName a {
+    text-decoration: none;
+    color: #06bb34;
 }

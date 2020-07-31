@@ -132,6 +132,8 @@ footer{
 
 .exerciseDetails img{
     border: 3px solid #ffff;
+    max-width: 800px;
+    max-height: 800px;
 }
 
 .goToTopBtn{

@@ -87,15 +87,40 @@ footer{
     justify-content: center;
     text-align: center;
     padding: 20px 20px;
-    margin: 1em 10em;
+    margin: 1em 33em;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
+    border: 3px dashed #ffff;
 }
 
 .exercisePlansDetailsList a{
     text-decoration: none;
     color: #0a0a0a;
+    /*border: 3px dashed #ffff;*/
+    /*padding: 0.5em 5em;*/
+}
+
+.planListLinkExercise::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #06bb34;
+    transition: width .3s;
+}
+
+.planListLinkExercise:hover::after{
+    width: 100%;
+    transition: width .6s;
+}
+
+
+.exercisePlansDetailsList{
+    padding: 1em 0em;
+    font-size: 28px;
+    /*margin-left: 250px;*/
+    /*margin-right: 250px;*/
 }
 
 .exercisePlansHeader{

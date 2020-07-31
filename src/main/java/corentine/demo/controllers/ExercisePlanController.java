@@ -4,6 +4,7 @@ import corentine.demo.models.Exercise;
 import corentine.demo.models.ExercisePlan;
 import corentine.demo.repository.ExercisePlanRepository;
 import corentine.demo.repository.ExerciseRepository;
+import corentine.demo.repository.ItemRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +24,8 @@ public class ExercisePlanController {
     private ExercisePlanRepository exercisePlanRepo;
     @Resource
     private ExerciseRepository exerciseRepo;
+    @Resource
+    private ItemRepository itemRepo;
 
     @RequestMapping({"/exerciseplan"})
     public String displayAllExercisePlans(Model model){
@@ -42,6 +45,15 @@ public class ExercisePlanController {
     public String displayBuildPlan(Model model){
         model.addAttribute("exercisePlans", exercisePlanRepo.findAll());
         model.addAttribute("exercises", exerciseRepo.findAll());
+        model.addAttribute("chair", itemRepo.findItemByName("Chair"));
+        model.addAttribute("stairs", itemRepo.findItemByName("Stairs"));
+        model.addAttribute("jugs", itemRepo.findItemByName("Jugs"));
+        model.addAttribute("room", itemRepo.findItemByName("Empty Room"));
+        model.addAttribute("pvcPipe", itemRepo.findItemByName("PVC Pipe"));
+        model.addAttribute("paperPlates", itemRepo.findItemByName("Paper Plates"));
+        model.addAttribute("pillow", itemRepo.findItemByName("Pillow"));
+        model.addAttribute("rope", itemRepo.findItemByName("Rope"));
+        model.addAttribute("backpack", itemRepo.findItemByName("Backpack"));
         return "BuildAPlan";
     }
 

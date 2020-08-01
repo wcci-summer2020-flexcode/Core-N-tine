@@ -18,6 +18,8 @@ html{
 }
 h1, h2, h3{
     text-align: center;
+    /*padding: 0.5em 0.5em;*/
+    font-size: 35px;
 }
 
 
@@ -80,28 +82,41 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    text-align: center;
+    /*text-align: center;*/
 }
 
-.exercisePlanDetails{
-    justify-content: center;
+.planHeader{
     text-align: center;
-    padding: 20px 20px;
-    margin: 1em 33em;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 35px;
+}
+
+.listExercisePlans{
     border: 3px dashed #ffff;
+    margin: 5em 35em;
+    /*display: grid;*/
+    /*grid-template-columns: 1fr;*/
+    /*grid-template-rows: auto;*/
+    /*grid-column-gap: 1em;*/
+    /*grid-row-gap: 1em;*/
+    /*!*margin: 1em 1em;*!*/
+    /*padding: 1em 1em;*/
+    justify-content: center;
 }
 
-.exercisePlansDetailsList a{
+.listExercisePlansTheEach{
+    font-size: 25px;
+    padding: 1em 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.listExercisePlansTheEach a {
     text-decoration: none;
     color: #0a0a0a;
-    /*border: 3px dashed #ffff;*/
-    /*padding: 0.5em 5em;*/
 }
 
-.planListLinkExercise::after{
+
+.listExercisePlansTheEach::after{
     content: '';
     display: block;
     width: 0;
@@ -109,23 +124,65 @@ footer{
     background: #06bb34;
     transition: width .3s;
 }
-
-.planListLinkExercise:hover::after{
+.listExercisePlansTheEach:hover::after{
     width: 100%;
     transition: width .6s;
 }
 
+/*.exercisePlanDetails{*/
+/*    justify-content: center;*/
+/*    text-align: center;*/
+/*    padding: 20px 20px;*/
+/*    margin: 1em 1em;*/
+/*    font-size: 18px;*/
+/*    font-weight: bold;*/
+/*    letter-spacing: 1px;*/
+/*    border: 3px dashed #ffff;*/
+/*    !*display: inline-block;*!*/
+/*    display: block;*/
+/*    grid-template-columns: 1fr;*/
+/*    !*justify-items: center;*!*/
+/*}*/
 
-.exercisePlansDetailsList{
-    padding: 1em 0em;
-    font-size: 28px;
-    /*margin-left: 250px;*/
-    /*margin-right: 250px;*/
-}
+/*.planListLinkExercise{*/
+/*    text-align: center;*/
+/*    position: center;*/
+/*}*/
 
-.exercisePlansHeader{
-    padding: 0.5em 0.5em;
-}
+/*.exercisePlansDetailsList a{*/
+/*    text-decoration: none;*/
+/*    color: #0a0a0a;*/
+/*    text-align: center;*/
+/*    position: center;*/
+/*    !*border: 3px dashed #ffff;*!*/
+/*    !*padding: 0.5em 5em;*!*/
+/*}*/
+
+/*.planListLinkExercise::after{*/
+/*    content: '';*/
+/*    display: block;*/
+/*    width: 0;*/
+/*    height: 2px;*/
+/*    background: #06bb34;*/
+/*    transition: width .3s;*/
+/*}*/
+
+/*.planListLinkExercise:hover::after{*/
+/*    width: 100%;*/
+/*    transition: width .6s;*/
+/*}*/
+
+
+/*.exercisePlansDetailsList{*/
+/*    padding: 1em 0em;*/
+/*    font-size: 28px;*/
+/*    !*margin-left: 250px;*!*/
+/*    !*margin-right: 250px;*!*/
+/*}*/
+
+/*.exercisePlansHeader{*/
+/*    padding: 0.5em 0.5em;*/
+/*}*/
 
 .goToTopBtn{
     position: fixed;
@@ -161,4 +218,26 @@ footer{
 
 .arrowLeft:hover{
     font-size: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+    .main_menu {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    footer {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .listExercisePlans{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
 }

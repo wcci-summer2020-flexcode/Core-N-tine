@@ -26,15 +26,24 @@
     </ul>
 </nav>
 
-<h1 class="exercisePlansHeader">Choose an exercise plans</h1>
+<!--<h1 class="exercisePlansHeader">Choose an exercise plans</h1>-->
 
-<section class="exercisePlanDetails">
+<!--<section class="exercisePlanDetails">-->
 
-    <ul class="exercisePlansDetailsList" th:each="exercisePlan:${exercisePlans}">
-        <a class="planListLinkExercise" th:href="@{'/exerciseplan/' + ${exercisePlan.id}}" th:text="${exercisePlan.planName}"></a>
-    </ul>
+<!--    <ul class="exercisePlansDetailsList" th:each="exercisePlan:${exercisePlans}">-->
+<!--        <a class="planListLinkExercise" th:href="@{'/exerciseplan/' + ${exercisePlan.id}}" th:text="${exercisePlan.planName}"></a>-->
+<!--    </ul>-->
 
-</section>
+<!--</section>-->
+
+<div id="listPlans">
+    <h1 class="planHeader">Choose an exercise plans</h1>
+    <div class="listExercisePlans">
+        <h3 class="listExercisePlansTheEach" th:each="exercisePlan:${exercisePlans}">
+            <a class="planListLinkExercise" th:href="@{'/exerciseplan/' + ${exercisePlan.id}}" th:text="${exercisePlan.planName}"></a>
+        </h3>
+    </div>
+</div>
 
 <a href="" class="goToTopBtn"><i class="fas fa-chevron-up"></i></a>
 

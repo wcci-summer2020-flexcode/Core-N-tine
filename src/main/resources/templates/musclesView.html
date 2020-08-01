@@ -30,8 +30,8 @@
 <div id="listMuscles">
     <h3 class="musclesHeader">Choose a Muscle You Would Like to Improve:</h3>
     <div class="listMusclesDiv">
-    <h3 class="listOfMusclesThEach" th:each="muscle:${muscles}"><a th:href="@{'/muscles/' +
-        ${muscle.name}}" th:text="${muscle.name}">Muscle</a></h3>
+    <h3 class="listOfMusclesThEach" th:each="muscle:${muscles}">
+        <a th:href="@{'/muscles/' + ${muscle.name}}" th:text="${muscle.name}">Muscle</a></h3>
     </div>
 
 </div>

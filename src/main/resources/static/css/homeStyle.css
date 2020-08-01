@@ -193,3 +193,37 @@ footer{
 .btnHyperlink{
     text-decoration: none;
 }
+
+@media only screen and (max-width: 767px){
+    .main_menu{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    footer{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    /*#slider{*/
+    /*    align-items: center;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    margin: 0;*/
+    /*    max-width: 50%;*/
+    /*    !*margin-right: 45%;*!*/
+    /*    left: 0;*/
+    /*}*/
+
+    .homeParagraph{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+}

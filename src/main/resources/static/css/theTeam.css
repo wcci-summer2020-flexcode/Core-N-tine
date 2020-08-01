@@ -89,9 +89,17 @@ footer{
     font-size: 50px;  /*this thing does not work*/
 }
 
+.fa-linkedin{
+    color: #0073b1;
+}
+
+.fa-github{
+    color:#24292e
+}
+
 article a {
     text-decoration: none;
-    color: #06bb34;
+    /*color: #06bb34;*/
     font-size: 50px; /*this thing does not work*/
 }
 
@@ -99,6 +107,7 @@ article a {
     border-radius: 100px;
     width: 200px;
     height: 200px;
+    box-shadow: 5px 5px 5px grey;
 }
 
 .teamParagraph{
@@ -159,4 +168,27 @@ article a {
 
 .arrowLeft:hover{
     font-size: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+    .main_menu {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .footer {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #container{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
 }

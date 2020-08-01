@@ -18,15 +18,17 @@ h1, h2, h3 {
 }
 
 h2{
-    padding: 1em 1em;
+    /*padding: 0em 1em;*/
     font-weight: bolder;
+    font-size: 35px;
+    padding-bottom: 2em;
 }
 
 h3{
     padding: 0.5em 1em;
     color: #06bb34;
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 35px;
 }
 
 h4{
@@ -226,3 +228,26 @@ footer{
     text-decoration: none;
     color: #06bb34;
 }
+
+    @media only screen and (max-width: 767px) {
+        .main_menu {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        footer {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        #listExercises{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+    }

@@ -1,4 +1,3 @@
-
 function showRoom(checked) {
 
     const checkBox = document.getElementById("roomBox");
@@ -47,7 +46,7 @@ function showJugs(checked) {
     }
 }
 
-function showPVC(checked){
+function showPVC(checked) {
 
     const checkBox = document.getElementById("pvcBox");
     const text = document.getElementById("hiddenField4");
@@ -59,7 +58,7 @@ function showPVC(checked){
     }
 }
 
-function showPlates(checked){
+function showPlates(checked) {
 
     const checkBox = document.getElementById("platesBox");
     const text = document.getElementById("hiddenField5");
@@ -74,7 +73,7 @@ function showPlates(checked){
 //newly added items
 
 
-function showPillow(checked){
+function showPillow(checked) {
 
     const checkBox = document.getElementById("pillowBox");
     const text = document.getElementById("hiddenField6");
@@ -87,7 +86,7 @@ function showPillow(checked){
 }
 
 
-function showRope(checked){
+function showRope(checked) {
 
     const checkBox = document.getElementById("ropeBox");
     const text = document.getElementById("hiddenField7");
@@ -100,7 +99,7 @@ function showRope(checked){
 }
 
 
-function showBackpack(checked){
+function showBackpack(checked) {
 
     const checkBox = document.getElementById("backpackBox");
     const text = document.getElementById("hiddenField8");
@@ -111,3 +110,110 @@ function showBackpack(checked){
         text.style.display = "none";
     }
 }
+
+// function onLoad() {
+//
+//         const checkBox = document.getElementById("roomBox");
+//         const text = document.getElementById("hiddenField0");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }
+//     {
+//
+//         const checkBox = document.getElementById("chairBox");
+//         const text = document.getElementById("hiddenField");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }
+//
+//     {
+//
+//         const checkBox = document.getElementById("stairsBox");
+//         const text = document.getElementById("hiddenField2");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }
+//
+//     {
+//
+//         const checkBox = document.getElementById("jugsBox");
+//         const text = document.getElementById("hiddenField3");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }
+//
+//     {
+//
+//         const checkBox = document.getElementById("pvcBox");
+//         const text = document.getElementById("hiddenField4");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }
+//
+//     {
+//
+//         const checkBox = document.getElementById("platesBox");
+//         const text = document.getElementById("hiddenField5");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }
+//
+//     {
+//
+//         const checkBox = document.getElementById("pillowBox");
+//         const text = document.getElementById("hiddenField6");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }
+//
+//     {
+//
+//         const checkBox = document.getElementById("ropeBox");
+//         const text = document.getElementById("hiddenField7");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }
+//
+//     {
+//
+//         const checkBox = document.getElementById("backpackBox");
+//         const text = document.getElementById("hiddenField8");
+//
+//         if (checkBox.checked === true) {
+//             text.style.display = "block";
+//         } else {
+//             text.style.display = "none";
+//         }
+//     }

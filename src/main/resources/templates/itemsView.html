@@ -11,7 +11,8 @@
     <title>Items List</title>
 </head>
 
-<body>
+<body onload="onLoad()">
+
 <img class="logo" src="/images/logo.transparent.gif">
 <nav>
     <ul class="main_menu">
@@ -55,7 +56,7 @@
         <h3 class="itemPaperPlates"><label class="checkboxContainer"><input id="platesBox" type="checkbox" onclick="showPlates()"><span class="checkmark"></span> </label>Paper Plates</h3>
         <img src="images/paperplates.jpg">
     </div>
-<!--new items-->
+
     <div id="listContainer6">
         <h3 class="itemPillow"><label class="checkboxContainer"><input id="pillowBox" type="checkbox" onclick="showPillow()"><span class="checkmark"></span> </label>Pillow</h3>
         <img src="images/pillow.jfif">
@@ -124,8 +125,6 @@
     </h3>
     </div>
 
-<!--new exercises-->
-
     <div id="hiddenField6" style="display:none">
     <h2 class="selectItems">Step II - Choose an exercises</h2>
     <h3 class="exercise-details-title" th:each="exercise:${pillow.exercises}"> <a th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
@@ -159,6 +158,93 @@
     function goBack(){
         window.history.back();
     }
+</script>
+
+<script>
+    function onLoad() {
+
+            const roomCheckBox = document.getElementById("roomBox");
+            const roomText = document.getElementById("hiddenField0");
+
+            if (roomCheckBox.checked === true) {
+                roomText.style.display = "block";
+            } else {
+                roomText.style.display = "none";
+            }
+
+            const chairCheckBox = document.getElementById("chairBox");
+            const chairText = document.getElementById("hiddenField");
+
+            if (chairCheckBox.checked === true) {
+                chairText.style.display = "block";
+            } else {
+                chairText.style.display = "none";
+            }
+
+            const stairsCheckBox = document.getElementById("stairsBox");
+            const stairsText = document.getElementById("hiddenField2");
+
+            if (stairsCheckBox.checked === true) {
+                stairsText.style.display = "block";
+            } else {
+                stairsText.style.display = "none";
+            }
+
+            const jugsCheckBox = document.getElementById("jugsBox");
+            const jugsText = document.getElementById("hiddenField3");
+
+            if (jugsCheckBox.checked === true) {
+                jugsText.style.display = "block";
+            } else {
+                jugsText.style.display = "none";
+            }
+
+            const pvcCheckBox = document.getElementById("pvcBox");
+            const pvcText = document.getElementById("hiddenField4");
+
+            if (pvcCheckBox.checked === true) {
+                pvcText.style.display = "block";
+            } else {
+                pvcText.style.display = "none";
+            }
+
+            const platesCheckBox = document.getElementById("platesBox");
+            const platesText = document.getElementById("hiddenField5");
+
+            if (platesCheckBox.checked === true) {
+                platesText.style.display = "block";
+            } else {
+                platesText.style.display = "none";
+            }
+
+            const pillowCheckBox = document.getElementById("pillowBox");
+            const pillowText = document.getElementById("hiddenField6");
+
+            if (pillowCheckBox.checked === true) {
+                pillowText.style.display = "block";
+            } else {
+                pillowText.style.display = "none";
+            }
+
+            const ropeCheckBox = document.getElementById("ropeBox");
+            const ropeText = document.getElementById("hiddenField7");
+
+            if (ropeCheckBox.checked === true) {
+                ropeText.style.display = "block";
+            } else {
+                ropeText.style.display = "none";
+            }
+
+            const backpackCheckBox = document.getElementById("backpackBox");
+            const backpackText = document.getElementById("hiddenField8");
+
+            if (backpackCheckBox.checked === true) {
+                backpackText.style.display = "block";
+            } else {
+                backpackText.style.display = "none";
+            }
+        }
+
 </script>
 
 <footer>

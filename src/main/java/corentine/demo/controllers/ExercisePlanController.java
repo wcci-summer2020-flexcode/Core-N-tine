@@ -64,16 +64,16 @@ public class ExercisePlanController {
 
     @PostMapping("/buildaplan/add-plan")
     public String buildAPlan(@RequestParam String planName, @RequestParam int amountOfDays,
-                             @RequestParam String exerciseName1, @RequestParam String exerciseName2,
-                             @RequestParam String exerciseName3, @RequestParam String exerciseName4,
-                             @RequestParam String dayTwoExerciseName1, @RequestParam String dayTwoExerciseName2,
-                             @RequestParam String dayTwoExerciseName3, @RequestParam String dayTwoExerciseName4,
-                             @RequestParam String dayThreeExerciseName1, @RequestParam String dayThreeExerciseName2,
-                             @RequestParam String dayThreeExerciseName3, @RequestParam String dayThreeExerciseName4,
-                             @RequestParam String dayFourExerciseName1, @RequestParam String dayFourExerciseName2,
-                             @RequestParam String dayFourExerciseName3, @RequestParam String dayFourExerciseName4,
-                             @RequestParam String dayFiveExerciseName1, @RequestParam String dayFiveExerciseName2,
-                             @RequestParam String dayFiveExerciseName3, @RequestParam String dayFiveExerciseName4){
+                             @RequestParam (required=false) String exerciseName1, @RequestParam (required=false) String exerciseName2,
+                             @RequestParam (required=false) String exerciseName3, @RequestParam (required=false) String exerciseName4,
+                             @RequestParam (required=false) String dayTwoExerciseName1, @RequestParam (required=false) String dayTwoExerciseName2,
+                             @RequestParam (required=false) String dayTwoExerciseName3, @RequestParam (required=false) String dayTwoExerciseName4,
+                             @RequestParam (required=false) String dayThreeExerciseName1, @RequestParam (required=false) String dayThreeExerciseName2,
+                             @RequestParam (required=false) String dayThreeExerciseName3, @RequestParam (required=false) String dayThreeExerciseName4,
+                             @RequestParam (required=false) String dayFourExerciseName1, @RequestParam (required=false) String dayFourExerciseName2,
+                             @RequestParam (required=false) String dayFourExerciseName3, @RequestParam (required=false) String dayFourExerciseName4,
+                             @RequestParam (required=false) String dayFiveExerciseName1, @RequestParam (required=false) String dayFiveExerciseName2,
+                             @RequestParam (required=false) String dayFiveExerciseName3, @RequestParam (required=false) String dayFiveExerciseName4){
 
         Exercise dayOneExercise1 = exerciseRepo.findExerciseByName(exerciseName1);
         Exercise dayOneExercise2 = exerciseRepo.findExerciseByName(exerciseName2);

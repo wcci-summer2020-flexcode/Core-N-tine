@@ -276,8 +276,10 @@ img {
     display: inline-block;
 }
 
-
 @media only screen and (max-width: 767px) {
+    .logo{
+        height: 55px;
+    }
     .main_menu {
         align-items: center;
         display: flex;

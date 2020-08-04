@@ -70,6 +70,8 @@ h2{
     margin-right: auto;
     display: flex;
     align-items: center;
+    width: 583px;
+    height: 85px;
 }
 
 footer{
@@ -169,6 +171,9 @@ footer{
 }
 
 @media only screen and (max-width: 767px) {
+    .logo{
+        height: 55px;
+    }
     .main_menu {
         align-items: center;
         display: flex;

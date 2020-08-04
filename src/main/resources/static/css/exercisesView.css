@@ -78,6 +78,8 @@ h4{
     margin-right: auto;
     display: flex;
     align-items: center;
+    width: 583px;
+    height: 85px;
 }
 
 footer{
@@ -156,6 +158,7 @@ footer{
 #listExercises{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: -1em 6em;
 }
 
 #listExercises section img{
@@ -229,7 +232,14 @@ footer{
     color: #06bb34;
 }
 
+
+
     @media only screen and (max-width: 767px) {
+
+        .logo{
+            height: 55px;
+        }
+
         .main_menu {
             align-items: center;
             display: flex;

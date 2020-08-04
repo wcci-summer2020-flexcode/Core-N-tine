@@ -71,6 +71,8 @@ h3{
     margin-right: auto;
     display: flex;
     align-items: center;
+    width: 583px;
+    height: 85px;
 }
 
 footer{
@@ -170,7 +172,14 @@ article a {
     font-size: 40px;
 }
 
+#container{
+    margin: 0em 6em;
+}
+
 @media only screen and (max-width: 767px) {
+    .logo{
+        height: 55px;
+    }
     .main_menu {
         align-items: center;
         display: flex;

@@ -231,12 +231,12 @@ img {
 
 .exercise-details-title{
     display: grid;
-    /*grid-template-columns: repeat(2, 2fr);*/
+    grid-template-columns: repeat(2, 2fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     margin: 1em 1em;
-    padding: 1em 1em;
+    /*padding: 1em 1em;*/
     justify-content: center;
     text-align: center;
     /*background-color: yellow;*/
@@ -248,10 +248,16 @@ img {
     font-size: 18px;
 }
 
+.exercise-details-title h3{
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+}
+
 
 #exercisesListHiddenFields{
     display: flex;
-    /*grid-template-columns: repeat(3, 2fr);*/
+
     grid-template-rows: repeat(1, 3fr);
     grid-column-gap: 1em;
     grid-row-gap: 1em;

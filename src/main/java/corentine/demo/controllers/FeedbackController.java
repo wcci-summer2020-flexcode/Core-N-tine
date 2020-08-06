@@ -14,7 +14,7 @@ import javax.xml.bind.ValidationException;
 
 
 @RestController
-@RequestMapping("/feedback")
+@RequestMapping(value = "/feedback")
 public class FeedbackController {
 
     private EmailConfig emailConfig;
@@ -45,10 +45,14 @@ public class FeedbackController {
         mailMessage.setSubject("New feedback from " + feedback.getName());
         mailMessage.setText(feedback.getFeedback());
 
-        //Send mail
-        mailSender.send(mailMessage);
-
-
-
+        try
+        {
+            //Send mail
+            mailSender.send(mailMessage);
+        }
+        catch(Exception ex)
+        {
+            
+        }
     }
 }

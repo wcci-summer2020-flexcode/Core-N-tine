@@ -6,7 +6,10 @@ import javax.persistence.DiscriminatorColumn;
 
 public class FeedBack {
 
+    @NotNull
     private String name;
+
+    @NotNull
     private String email;
 
     public String getName() {
@@ -33,6 +36,7 @@ public class FeedBack {
         this.feedback = feedback;
     }
 
+    @NotNull
     private String feedback;
 
 }

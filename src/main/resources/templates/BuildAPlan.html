@@ -33,19 +33,20 @@
     <form class="userInputForm" method="POST" th:action="'/buildaplan/add-plan'">
         <input name="planName" type="text" placeholder="Plan name"><br><br>
         <input name="amountOfDays" type="number" placeholder="Number of Days"><br><br>
-        <select id="exerciseName1" name="exerciseName1" multiple size="4">
+        <h3>Day One:</h3>
+        <select id="exerciseName1" name="exerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}"></option>
         </select>
-        <select id="exerciseName2" name="exerciseName2" multiple size="4">
+        <select id="exerciseName2" name="exerciseName2">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}"></option>
         </select>
-        <select id="exerciseName3" name="exerciseName3" multiple size="4">
+        <select id="exerciseName3" name="exerciseName3">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}"></option>
         </select>
-        <select id="exerciseName4" name="exerciseName4" multiple size="4">
+        <select id="exerciseName4" name="exerciseName4">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
@@ -54,23 +55,23 @@
         <br>
 
         <!--        Day 2-->
-
-        <select id="dayTwoExerciseName1" name="dayTwoExerciseName1" multiple size="4">
+        <h3>Day Two:</h3>
+        <select id="dayTwoExerciseName1" name="dayTwoExerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayTwoExerciseName2" name="dayTwoExerciseName2" multiple size="4">
+        <select id="dayTwoExerciseName2" name="dayTwoExerciseName2">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayTwoExerciseName3" name="dayTwoExerciseName3" multiple size="4">
+        <select id="dayTwoExerciseName3" name="dayTwoExerciseName3">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayTwoExerciseName4" name="dayTwoExerciseName4" multiple size="4">
+        <select id="dayTwoExerciseName4" name="dayTwoExerciseName4">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
@@ -78,23 +79,23 @@
         <br>
         <br>
         <!--        Day 3-->
-
-        <select id="dayThreeExerciseName1" name="dayThreeExerciseName1" multiple size="4">
+        <h3>Day Three:</h3>
+        <select id="dayThreeExerciseName1" name="dayThreeExerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayThreeExerciseName2" name="dayThreeExerciseName2" multiple size="4">
+        <select id="dayThreeExerciseName2" name="dayThreeExerciseName2">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayThreeExerciseName3" name="dayThreeExerciseName3" multiple size="4">
+        <select id="dayThreeExerciseName3" name="dayThreeExerciseName3">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayThreeExerciseName4" name="dayThreeExerciseName4" multiple size="4">
+        <select id="dayThreeExerciseName4" name="dayThreeExerciseName4">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
@@ -102,23 +103,23 @@
         <br>
         <br>
         <!--        Day 4-->
-
-        <select id="dayFourExerciseName1" name="dayFourExerciseName1" multiple size="4">
+        <h3>Day Four:</h3>
+        <select id="dayFourExerciseName1" name="dayFourExerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayFourExerciseName2" name="dayFourExerciseName2" multiple size="4">
+        <select id="dayFourExerciseName2" name="dayFourExerciseName2">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayFourExerciseName3" name="dayFourExerciseName3" multiple size="4">
+        <select id="dayFourExerciseName3" name="dayFourExerciseName3">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayFourExerciseName4" name="dayFourExerciseName4" multiple size="4">
+        <select id="dayFourExerciseName4" name="dayFourExerciseName4">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
@@ -126,23 +127,23 @@
         <br>
         <br>
         <!--        Day 5-->
-
-        <select id="dayFiveExerciseName1" name="dayFiveExerciseName1" multiple size="4">
+        <h3>Day Five:</h3>
+        <select id="dayFiveExerciseName1" name="dayFiveExerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayFiveExerciseName2" name="dayFiveExerciseName2" multiple size="4">
+        <select id="dayFiveExerciseName2" name="dayFiveExerciseName2">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayFiveExerciseName3" name="dayFiveExerciseName3" multiple size="4">
+        <select id="dayFiveExerciseName3" name="dayFiveExerciseName3">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
         </select>
-        <select id="dayFiveExerciseName4" name="dayFiveExerciseName4" multiple size="4">
+        <select id="dayFiveExerciseName4" name="dayFiveExerciseName4">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
                 <input name="exerciseId" type="hidden" th:value="${exercise.id}">
             </option>
@@ -229,10 +230,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${room.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-        <h4>Muscles</h4>
-        <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-            <li th:text="${muscle.name}"></li>
-        </ul>
         </h3>
     </div>
 
@@ -241,10 +238,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${chair.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-            <h4>Muscles</h4>
-            <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-                <li th:text="${muscle.name}"></li>
-            </ul>
         </h3>
     </div>
 
@@ -253,10 +246,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${stairs.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-            <h4>Muscles</h4>
-            <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-                <li th:text="${muscle.name}"></li>
-            </ul>
         </h3>
     </div>
 
@@ -265,10 +254,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${jugs.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-            <h4>Muscles</h4>
-            <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-                <li th:text="${muscle.name}"></li>
-            </ul>
         </h3>
     </div>
 
@@ -277,10 +262,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${pvcPipe.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-            <h4>Muscles</h4>
-            <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-                <li th:text="${muscle.name}"></li>
-            </ul>
         </h3>
     </div>
 
@@ -289,10 +270,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${paperPlates.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-            <h4>Muscles</h4>
-            <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-                <li th:text="${muscle.name}"></li>
-            </ul>
         </h3>
     </div>
 
@@ -301,10 +278,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${pillow.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-            <h4>Muscles</h4>
-            <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-                <li th:text="${muscle.name}"></li>
-            </ul>
         </h3>
     </div>
 
@@ -314,10 +287,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${rope.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-            <h4>Muscles</h4>
-            <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-                <li th:text="${muscle.name}"></li>
-            </ul>
         </h3>
     </div>
 
@@ -327,10 +296,6 @@
         <h3 class="exercise-details-title" th:each="exercise:${backpack.exercises}"><a
                 th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a>
             <img th:src="${exercise.imageUrl}">
-            <h4>Muscles</h4>
-            <ul class="musclesList" th:each="muscle: ${exercise.muscles}">
-                <li th:text="${muscle.name}"></li>
-            </ul>
         </h3>
     </div>
 </div>

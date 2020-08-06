@@ -30,6 +30,7 @@ input{
     border: 3px solid;
     color: #06bb34;
     height: 3em;
+
 }
 
 #exerciseName1, #exerciseName2, #exerciseName3, #exerciseName4, #exerciseName5,
@@ -38,7 +39,7 @@ input{
 #dayFourExerciseName1, #dayFourExerciseName2, #dayFourExerciseName3, #dayFourExerciseName4, #dayFourExerciseName5,
 #dayFiveExerciseName1, #dayFiveExerciseName2, #dayFiveExerciseName3, #dayFiveExerciseName4, #dayFiveExerciseName5{
     border: 2.5px solid;
-    color: #ffff;
+    color: #0a0a0a;
 }
 
 .exercisesTheEach{
@@ -114,7 +115,7 @@ button:hover::after{
 
 
 img {
-    max-width: 200px;
+    max-width: 90px;
     border-color: white;
     border-size: 5px;
 }
@@ -203,9 +204,9 @@ img {
 }
 
 #itemsList{
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: auto;
+    display: flex;
+
+    grid-template-rows: repeat(1, 3fr);
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     margin: 1em 1em;
@@ -221,6 +222,7 @@ img {
 
 #itemsList img{
     box-shadow: 5px 5px 5px grey;
+    max-width: 100px;
 }
 
 .checkboxContainer{
@@ -229,12 +231,12 @@ img {
 
 .exercise-details-title{
     display: grid;
-    /*grid-template-columns: repeat(2, 2fr);*/
+    grid-template-columns: repeat(2, 2fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     margin: 1em 1em;
-    padding: 1em 1em;
+    /*padding: 1em 1em;*/
     justify-content: center;
     text-align: center;
     /*background-color: yellow;*/
@@ -246,11 +248,17 @@ img {
     font-size: 18px;
 }
 
+.exercise-details-title h3{
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+}
+
 
 #exercisesListHiddenFields{
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: auto;
+    display: flex;
+
+    grid-template-rows: repeat(1, 3fr);
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     margin: 1em 1em;

@@ -178,7 +178,8 @@ article a {
 
 @media only screen and (max-width: 767px) {
     .logo{
-        height: 55px;
+        max-width: 70%;
+        height: auto;
     }
     .main_menu {
         align-items: center;

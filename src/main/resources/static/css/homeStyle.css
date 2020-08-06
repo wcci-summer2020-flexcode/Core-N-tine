@@ -198,7 +198,8 @@ footer{
 
 @media only screen and (max-width: 767px){
     .logo{
-        height: 55px;
+        max-width: 70%;
+        height: auto;
     }
     .main_menu{
         align-items: center;
@@ -218,14 +219,17 @@ footer{
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin: 0;
+        margin: 0.5em 0.5em;
     }
 
-    /*#slider #images img{*/
-    /*    align-items: center;*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    margin: 0;*/
-    /*}*/
+   #slider{
+       align-content: center;
+       display: flex;
+       flex-direction: column;
+       margin: 0;
+       content: url("/images/homeImage1.jpg");
+       max-width: 100%;
+       height: auto;
+   }
 
 }

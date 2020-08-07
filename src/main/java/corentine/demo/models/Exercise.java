@@ -35,6 +35,9 @@ public class Exercise {
     @ManyToMany
     private Collection<ExercisePlan> dayFiveExercises;
 
+    public Exercise(String name) {
+        this.name = name; }
+
     public Long getId() {
         return id;
     }

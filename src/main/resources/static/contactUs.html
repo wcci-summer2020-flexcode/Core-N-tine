@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="contactUs.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/contactUsStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
+
 </head>
 <img class="logo" src="images/logo.transparent.gif">
 
@@ -17,8 +19,8 @@
         <li><a href="/home.html" class="cool-link">HOME</a></li>
         <li><a href="/exercises" class="cool-link">BROWSE ALL EXERCISES</a></li>
         <li><a href="/exerciseplan" class="cool-link">EXERCISE PLANS</a></li>
-        <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
         <li><a href="/buildaplan" class="cool-link">ADD A PLAN</a> </li>
+        <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
         <li><a href="/theTeam.html" class="cool-link">THE TEAM</a></li>
         <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
         <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
@@ -29,17 +31,17 @@
     <h1>Contact Us</h1>
 </header>
 
-<section>
-<p>
-    Phone Number: 123-456-7890
-</p>
-<p>
-    Email: corentinesupport@gmail.com
-</p>
-</section>
-
+<!--<section>-->
+<!--<p>-->
+<!--    Phone Number: 123-456-7890-->
+<!--</p>-->
+<!--<p>-->
+<!--    Email: corentinesupport@gmail.com-->
+<!--</p>-->
+<!--</section>-->
+<div id = contactContainer>
 <form    id="contact-us-form" name="contact-form" action="/contactUs.html"  method="">
-    <h2>Contact Info</h2>
+<!--    <h2>Contact Info</h2>-->
     <ul>
         <li>
             <label for="firstName">First Name:</label><br>
@@ -66,6 +68,9 @@
             <label for="returnEmail">Return E-mail:</label><br>
             <input type="email" placeholder="email@user.com" id="returnEmail" name="user_email">
 
+        <br>
+        <br>
+<!--        <br>-->
 
         <a class="btnHyperlink" href="/feedback">
             <button class="btn">Send</button>
@@ -74,6 +79,19 @@
 
         </li>
     </ul>
+
+</div>
+
+
+<!--<a href="" class="goToTopBtn"><i class="fas fa-chevron-up"></i></a>-->
+
+<a onclick="goBack()" class="arrowLeft"><i class="fas fa-chevron-left"></i></a>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
 
 <footer>
     &copy; Team Core-N-Tine 2020

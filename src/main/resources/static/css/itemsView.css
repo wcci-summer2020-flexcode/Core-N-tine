@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*color: #0a0a0a;*/
 }
 
 html{
@@ -148,7 +147,6 @@ img {
 
 .exercise-details-title{
     display: grid;
-    /*grid-template-columns: repeat(2, 2fr);*/
     grid-template-rows: auto;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
@@ -156,7 +154,6 @@ img {
     padding: 1em 1em;
     justify-content: center;
     text-align: center;
-    /*background-color: yellow;*/
 }
 
 .exercise-details-title a {
@@ -195,7 +192,6 @@ img {
     font-weight: bolder;
     font-size: 18px;
     padding: 1px 80px;
-    /*color: #0a0a0a;*/
 }
 
 .exercise-details-title img{
@@ -209,7 +205,6 @@ img {
     height: 50px;
     bottom: 80px;
     right: 50px;
-
     text-decoration: none;
     text-align: center;
     line-height: 50px;
@@ -222,9 +217,6 @@ img {
     position: absolute;
     width: 50px;
     height: 50px;
-    /*bottom: 50px;*/
-    /*right: 20px;*/
-    /*left: 120px;*/
     top: 20%;
 
     text-decoration: none;
@@ -232,7 +224,6 @@ img {
     line-height: 50px;
     color: #06bb34;
     font-size: 35px;
-    /*border: 3px solid #06bb34;*/
 }
 
 .arrowLeft:hover{

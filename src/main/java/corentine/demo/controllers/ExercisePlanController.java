@@ -127,20 +127,4 @@ public class ExercisePlanController {
         return "redirect:/exerciseplan";
     }
 
-//    @PostMapping("/buildaplan/add-plan")
-//    public String buildAPlan(@PathVariable long id, @RequestParam String planName, @RequestParam int amountOfDays, @RequestParam Collection<Exercise> dayOneExercises, @RequestParam Collection<Exercise> dayTwoExercises, @RequestParam Collection<Exercise> dayThreeExercises, @RequestParam Collection<Exercise> dayFourExercises, @RequestParam Collection<Exercise> dayFiveExercises, Model model){
-//        ExercisePlan exercisePlanToAdd;
-//        Object newPlan = new Object();
-//        String newPlanName = newPlan.getString();
-//        Optional<ExercisePlan> exercisePlanToAddOpt = exercisePlanRepo.findById(id);
-//        if(exercisePlanToAddOpt.isEmpty()){
-//            exercisePlanToAdd = new ExercisePlan(planName, amountOfDays, dayOneExercises,dayTwoExercises,dayThreeExercises,dayFourExercises,dayFiveExercises);
-//            exercisePlanRepo.save(exercisePlanToAdd);
-//        }else{
-//            exercisePlanToAdd = exercisePlanToAddOpt.get();
-//        }Optional<ExercisePlan> retrievedPlan = exercisePlanRepo.findById(id);
-//        ExercisePlan foundPlan = retrievedPlan.get();
-//        model.addAttribute("exercisePlan", foundPlan);
-//        return "redirect:/exerciseplan";
-//    }
 }

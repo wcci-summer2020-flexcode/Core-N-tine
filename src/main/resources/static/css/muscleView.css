@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*color: #0a0a0a;*/
 }
 
 html{
@@ -83,11 +82,6 @@ footer{
     line-height: 32px;
     font-weight: bolder;
     font-size: 18px;
-    /*position: fixed;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*text-align: center;*/
 }
 
 .prev-btn{
@@ -96,7 +90,6 @@ footer{
     top: 25%;
     transform: translateY(-50%);
     font-size: 35px;
-    /*z-index: 100;*/
     cursor: pointer;
     transition: 400ms;
 }
@@ -153,9 +146,6 @@ footer{
     position: absolute;
     width: 50px;
     height: 50px;
-    /*bottom: 50px;*/
-    /*right: 20px;*/
-    /*left: 120px;*/
     top: 20%;
 
     text-decoration: none;
@@ -163,7 +153,6 @@ footer{
     line-height: 50px;
     color: #06bb34;
     font-size: 35px;
-    /*border: 3px solid #06bb34;*/
 }
 
 .arrowLeft:hover{

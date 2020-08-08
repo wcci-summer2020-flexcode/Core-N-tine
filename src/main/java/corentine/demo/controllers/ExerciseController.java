@@ -16,8 +16,6 @@ public class ExerciseController {
     @Resource
     private ExerciseRepository exerciseRepo;
 
-    //add all exercises view if needed
-
     @RequestMapping({"/exercises"})
     public String displayAllExercises(Model model){
         model.addAttribute("exercises", exerciseRepo.findAll());

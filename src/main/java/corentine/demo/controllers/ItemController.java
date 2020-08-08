@@ -41,7 +41,7 @@ public class ItemController {
         Optional<Item> retrievedItem = itemRepo.findById(id);
         Item foundItem = retrievedItem.get();
         model.addAttribute("item", foundItem);
-        return "itemView";  //single itemView.html has not been created yet, may not even need it
+        return "itemView";
     }
 
 }

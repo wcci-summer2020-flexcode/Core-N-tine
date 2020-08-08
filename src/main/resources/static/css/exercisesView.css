@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*color: #0a0a0a;*/
 }
 
 html{
@@ -18,7 +17,6 @@ h1, h2, h3 {
 }
 
 h2{
-    /*padding: 0em 1em;*/
     font-weight: bolder;
     font-size: 35px;
     padding-bottom: 2em;
@@ -91,7 +89,6 @@ footer{
     line-height: 32px;
     font-weight: bolder;
     font-size: 18px;
-
 }
 
 .exerciseDetails{
@@ -106,7 +103,6 @@ footer{
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
-    /*background-color: yellow;*/
 }
 
 .exercise-details-minANDage{
@@ -115,41 +111,9 @@ footer{
     letter-spacing: 1px;
 }
 
-/*.exerciseDetails img{*/
-/*    border: 3px solid #ffff;*/
-/*    justify-content: center;*/
-/*    justify-items: center;*/
-
-/*}*/
-
 .exerciseDetailsName{
     padding: 0.5em 1em;
 }
-
-/*.prev-btn{*/
-/*    padding: 10px;*/
-/*    position: absolute;*/
-/*    top: 25%;*/
-/*    transform: translateY(-50%);*/
-/*    font-size: 35px;*/
-/*    !*z-index: 100;*!*/
-/*    cursor: pointer;*/
-/*    transition: 400ms;*/
-/*}*/
-
-/*.prev-btn:hover{*/
-/*    font-size: 40px;*/
-/*}*/
-
-/*.prev-btn a {*/
-/*    text-decoration: none;*/
-/*    list-style-type: none;*/
-/*    margin-left: 0.5em;*/
-/*}*/
-
-/*.prev-btn a:hover {*/
-/*    color: #06bb34;*/
-/*}*/
 
 .exerciseDetails li{
     list-style-type: none
@@ -210,9 +174,6 @@ footer{
     position: absolute;
     width: 50px;
     height: 50px;
-    /*bottom: 50px;*/
-    /*right: 20px;*/
-    /*left: 120px;*/
     top: 20%;
 
     text-decoration: none;
@@ -220,7 +181,6 @@ footer{
     line-height: 50px;
     color: #06bb34;
     font-size: 35px;
-    /*border: 3px solid #06bb34;*/
 }
 
 .arrowLeft:hover{

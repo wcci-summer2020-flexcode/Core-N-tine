@@ -23,22 +23,18 @@ public class FeedbackController {
     public RedirectView sendFeedback(@RequestParam String name, @RequestParam String email, @RequestParam String feedback) throws ValidationException {
         FeedBack object = new FeedBack(name, email, feedback);
 
-
-        //Create a mail sender
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost(this.emailConfig.getHost());
         mailSender.setPort(this.emailConfig.getPort());
         mailSender.setUsername(this.emailConfig.getUsername());
         mailSender.setPassword(this.emailConfig.getPassword());
 
-        //Create an Email instance
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setFrom(object.getEmail());
         mailMessage.setTo("9b8d8251f9-bc349d@inbox.mailtrap.io");
         mailMessage.setSubject("New feedback from " + object.getName());
         mailMessage.setText(object.getFeedback());
 
-        //Send mail
         mailSender.send(mailMessage);
 
         return new RedirectView("http://localhost:8080/home.html");

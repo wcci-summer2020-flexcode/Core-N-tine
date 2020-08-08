@@ -39,4 +39,10 @@ public class FeedBack {
     @NotNull
     private String feedback;
 
+    public FeedBack(String name, String email, String feedback){
+        this.name = name;
+        this.email = email;
+        this.feedback = feedback;
+    }
+
 }

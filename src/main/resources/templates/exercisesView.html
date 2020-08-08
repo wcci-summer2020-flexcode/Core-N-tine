@@ -22,14 +22,14 @@
         <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
         <li><a href="/theTeam.html" class="cool-link">THE TEAM</a></li>
         <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
-        <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
+        <li><a href="/contactUs" class="cool-link">CONTACT US</a></li>
     </ul>
 </nav>
 
     <h2 class="exerciseHeader">Simply browse through all of the exercises to find your fit</h2>
 <div id="listExercises">
-        <section class="exerciseDetails" th:each="exercise:${exercises}">
-            <h3 class="exerciseDetailsName"><a th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a></h3>
+        <section class="exerciseDetails" id="exercise" th:each="exercise:${exercises}">
+            <h3 class="exerciseDetailsName"><a id="name" th:href="@{'/exercise/'+ ${exercise.id}}" th:text="${exercise.name}"></a></h3>
             <img class="exerciseImage" th:src="${exercise.imageUrl}">
             <ul class="exercise-details-minANDage">
                 <h4>Minutes Needed:</h4>
@@ -54,6 +54,8 @@
         window.history.back();
     }
 </script>
+
+<script src="exercises.js"></script>
 
 <footer>
     &copy; Team Core-N-Tine 2020

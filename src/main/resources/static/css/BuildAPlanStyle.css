@@ -74,18 +74,9 @@ footer{
     line-height: 32px;
     font-weight: bolder;
     font-size: 18px;
-    /*position: fixed;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*text-align: center;*/
 }
 
 #container{
-    /*margin-left: 25rem;*/
-    /*margin-top: -34rem;*/
-    /*width: 1298px;*/
-    /*height: 730px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,7 +85,6 @@ footer{
     margin-right: auto;
 }
 
-/* Style the search field */
 form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
@@ -123,30 +113,6 @@ input{
 .exercisesTheEach{
     color: #0a0a0a;
 }
-
-/* Style the submit button */
-/*form.example button {*/
-/*    float: left;*/
-/*    width: 20%;*/
-/*    padding: 10px;*/
-/*    background: #2196F3;*/
-/*    color: white;*/
-/*    font-size: 17px;*/
-/*    border: 1px solid grey;*/
-/*    border-left: none; !* Prevent double borders *!*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*form.example button:hover {*/
-/*    background: #0b7dda;*/
-/*}*/
-
-/* Clear floats */
-/*form.example::after {*/
-/*    content: "";*/
-/*    clear: both;*/
-/*    display: table;*/
-/*}*/
 
 button{
     display: flex;
@@ -226,9 +192,6 @@ img {
     position: absolute;
     width: 50px;
     height: 50px;
-    /*bottom: 50px;*/
-    /*right: 20px;*/
-    /*left: 120px;*/
     top: 20%;
 
     text-decoration: none;
@@ -236,7 +199,6 @@ img {
     line-height: 50px;
     color: #06bb34;
     font-size: 35px;
-    /*border: 3px solid #06bb34;*/
 }
 
 .arrowLeft:hover{
@@ -283,7 +245,6 @@ img {
 
 #itemsList{
     display: flex;
-
     grid-template-rows: repeat(1, 3fr);
     grid-column-gap: 1em;
     grid-row-gap: 1em;
@@ -314,10 +275,8 @@ img {
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     margin: 1em 1em;
-    /*padding: 1em 1em;*/
     justify-content: center;
     text-align: center;
-    /*background-color: yellow;*/
 }
 
 .exercise-details-title a {
@@ -335,7 +294,6 @@ img {
 
 #exercisesListHiddenFields{
     display: flex;
-
     grid-template-rows: repeat(1, 3fr);
     grid-column-gap: 1em;
     grid-row-gap: 1em;
@@ -348,15 +306,6 @@ img {
     border: 3px solid #ffff;
     box-shadow: 5px 5px 5px grey;
 }
-
-/*.musclesList{*/
-/*    letter-spacing: 1px;*/
-/*    position: relative;*/
-/*    padding: 0.5px;*/
-/*    text-align: center;*/
-/*    line-height: 18px;*/
-/*    margin: 0.5em;*/
-/*}*/
 
 .musclesList li{
     display: inline-block;

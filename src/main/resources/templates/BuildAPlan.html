@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-<!--    <link rel="stylesheet" href="/css/exercisePlansView.css">-->
     <link rel="stylesheet" href="/css/BuildAPlanStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
@@ -54,7 +53,6 @@
         <br>
         <br>
 
-        <!--        Day 2-->
         <h3>Day Two:</h3>
         <select id="dayTwoExerciseName1" name="dayTwoExerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
@@ -78,7 +76,7 @@
         </select>
         <br>
         <br>
-        <!--        Day 3-->
+
         <h3>Day Three:</h3>
         <select id="dayThreeExerciseName1" name="dayThreeExerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
@@ -102,7 +100,7 @@
         </select>
         <br>
         <br>
-        <!--        Day 4-->
+
         <h3>Day Four:</h3>
         <select id="dayFourExerciseName1" name="dayFourExerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
@@ -126,7 +124,7 @@
         </select>
         <br>
         <br>
-        <!--        Day 5-->
+
         <h3>Day Five:</h3>
         <select id="dayFiveExerciseName1" name="dayFiveExerciseName1">
             <option class="exercisesTheEach" th:each="exercise:${exercises}" th:text="${exercise.name}">
@@ -154,16 +152,6 @@
     </form>
 </div>
 
-<!--<div id="exercises">-->
-<!--    <section class="exerciseDetails" th:each="exercise:${exercises}">-->
-<!--        <h3 class="exerciseDetailsName" th:text="${exercise.name}"></h3>-->
-<!--        <img class="exerciseImage" th:src="${exercise.imageUrl}">-->
-<!--    </section>-->
-<!--</div>-->
-
-<!--</div>-->
-
-<!--Items and checkboxes-->
 <div id="itemsList">
 
     <div id="listContainer">
@@ -195,7 +183,7 @@
             <span class="checkmark"></span> </label>Paper Plates</h3>
         <img src="images/paperplates.jpg">
     </div>
-    <!--new items-->
+
     <div id="listContainer6">
         <h3 class="itemPillow"><label class="checkboxContainer"><input id="pillowBox" type="checkbox" onclick="showPillow()">
             <span class="checkmark"></span> </label>Pillow</h3>
@@ -221,8 +209,6 @@
     </div>
 
 </div>
-
-<!--Hidden fields of exercises-->
 
 <div id="exercisesListHiddenFields">
     <div id="hiddenField0" style="display:none">
@@ -299,11 +285,6 @@
         </h3>
     </div>
 </div>
-
-<!--<form class="example" action="/exercise/{id}">-->
-<!--    <input type="text" placeholder="Search.." name="search">-->
-<!--    <button type="submit"><i class="fa fa-search"></i></button>-->
-<!--</form>-->
 
 <script>
     function onLoad() {

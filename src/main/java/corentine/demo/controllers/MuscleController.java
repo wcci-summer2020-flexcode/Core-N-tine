@@ -24,8 +24,6 @@ public class MuscleController {
 
     @RequestMapping("/muscles/{name}")
     public String displaySingleMuscle(@PathVariable String name, Model model) {
-//        Optional<Muscle> retrievedMuscle = muscleRepo.findById(id);
-//        Muscle foundMuscle = retrievedMuscle.get();
         model.addAttribute("muscle", muscleRepo.findMuscleByName(name));
         model.addAttribute("exercise", muscleRepo.findAll());
         return "muscleView";

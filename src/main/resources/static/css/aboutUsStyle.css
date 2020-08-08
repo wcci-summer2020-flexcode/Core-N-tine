@@ -70,8 +70,6 @@ h1{
 
 
 #container{
-    /*margin-left: 25rem;*/
-    /*margin-top: -34rem;*/
     width: 1298px;
     height: 730px;
     display: flex;
@@ -117,17 +115,12 @@ footer{
     position: absolute;
     width: 50px;
     height: 50px;
-    /*bottom: 50px;*/
-    /*right: 20px;*/
-    /*left: 120px;*/
     top: 20%;
-
     text-decoration: none;
     text-align: center;
     line-height: 50px;
     color: #06bb34;
     font-size: 35px;
-    /*border: 3px solid #06bb34;*/
 }
 
 .arrowLeft:hover{

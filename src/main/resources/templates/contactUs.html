@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<script src="contactUs.js"></script>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="css/contactUsStyle.css">
+    <link rel="stylesheet" href="/css/contactUsStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
 
 </head>
-<img class="logo" src="images/logo.transparent.gif">
+<img class="logo" src="/images/logo.transparent.gif">
 
 <body>
 <nav>
@@ -23,7 +22,7 @@
         <li><a href="/muscles" class="cool-link">IMPROVE A MUSCLE</a></li>
         <li><a href="/theTeam.html" class="cool-link">THE TEAM</a></li>
         <li><a href="/aboutUs.html" class="cool-link">OUR MISSION</a></li>
-        <li><a href="/contactUs.html" class="cool-link">CONTACT US</a></li>
+        <li><a href="/contactUs" class="cool-link">CONTACT US</a></li>
     </ul>
 </nav>
 
@@ -40,50 +39,41 @@
 <!--</p>-->
 <!--</section>-->
 <div id = contactContainer>
-<form    id="contact-us-form" name="contact-form" action="/contactUs.html"  method="">
+
+<!--    <form id="contact-us-form" method="POST" th:action="'/contactUs/feedback'">-->
+<!--        <input type="text" placeholder="name" id="name" name="name">-->
+<!--        <input type="email" placeholder="email@user.com" id="email" name="email">-->
+<!--        <input type="text" placeholder="message" id="feedback" name="feedback">-->
+<!--        <button type="submit">Submit</button>-->
+<!--    </form>-->
+
+    <form id="contact-us-form" method="POST" th:action="'/contactUs/feedback'">
 <!--    <h2>Contact Info</h2>-->
     <ul>
         <li>
-            <label for="firstName">First Name:</label><br>
-            <input type="text" placeholder="enter first name" id="firstName" name="first_name">
+            <label for="name">Name:</label><br>
+            <input type="text" placeholder="name" id="name" name="name">
         </li>
         <li><br></li>
         <li>
-            <label for="middleName">Middle Name:</label><br>
-            <input type="text" placeholder="enter middle name" id="middleName" name="middle_name">
-        </li>
-        <li><br></li>
-        <li>
-            <label for="lastName">Last Name:</label><br>
-            <input type="text" placeholder="enter last name" id="lastName" name="last_name">
-        </li>
-        <li><br></li>
-        <li>
-            <label for="message">Message to Core-N-tine:</label><br>
-            <input type="text" id="message" name="message">
+            <label for="feedback">Message to Core-N-tine:</label><br>
+            <input type="text" placeholder="message" id="feedback" name="feedback">
         </li>
         <li><br></li>
         <li>
         <li>
-            <label for="returnEmail">Return E-mail:</label><br>
-            <input type="email" placeholder="email@user.com" id="returnEmail" name="user_email">
+            <label for="email">Return E-mail:</label><br>
+        <input type="email" placeholder="email@user.com" id="email" name="email">
 
         <br>
         <br>
-<!--        <br>-->
 
-        <a class="btnHyperlink" href="/feedback">
-            <button class="btn">Send</button>
-        </a>
-
+            <button class="btn" type="submit">Send</button>
 
         </li>
     </ul>
-
+</form>
 </div>
-
-
-<!--<a href="" class="goToTopBtn"><i class="fas fa-chevron-up"></i></a>-->
 
 <a onclick="goBack()" class="arrowLeft"><i class="fas fa-chevron-left"></i></a>
 <script>
@@ -92,6 +82,7 @@ function goBack() {
 }
 </script>
 
+<script src="contactUs.js"></script>
 
 <footer>
     &copy; Team Core-N-Tine 2020

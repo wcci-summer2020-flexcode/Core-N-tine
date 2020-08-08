@@ -31,4 +31,9 @@ public class ExerciseController {
         model.addAttribute("exercise", foundExercise);
         return "exerciseView";  //this single view
     }
+
+    @RequestMapping({"/contactUs"})
+    public String displayContactUs(){
+        return "contactUs";
+    }
 }
